@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <title>ComplyIndia | Viewer Dashboard</title>     
+        <!-- bootstrap & fontawesome -->
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />        
+        <link rel="stylesheet" href="../assets/css/custom.css" />
+        <link rel="stylesheet" href="../assets/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="../assets/css/datepicker.min.css" />
+        <!-- page specific plugin styles -->
+        <!-- text fonts -->
+        <link rel="stylesheet" href="../assets/fonts/fonts.googleapis.com.css" />
+        <!-- ace styles -->
+        <link rel="stylesheet" href="../assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+        <!--[if lte IE 9]>
+                <link rel="stylesheet" href="../assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+        <![endif]-->
+        <!--[if lte IE 9]>
+          <link rel="stylesheet" href="../assets/css/ace-ie.min.css" />
+        <![endif]-->
+        <!-- inline styles related to this page -->       
+        <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+        <!--[if lte IE 8]>
+        <script src="../assets/js/html5shiv.min.js"></script>
+        <script src="../assets/js/respond.min.js"></script>
+        <![endif]-->
+    </head>    
+    <body class="no-skin">
+        <!-- Top Navigation Starts-->
+        <div id="navbar" class="navbar navbar-default navbar-collapse h-navbar">
+            <script type="text/javascript">
+                try {
+                    ace.settings.check('navbar', 'fixed')
+                } catch (e) {
+                }
+            </script>
+            <div class="navbar-container" id="navbar-container">
+                <div class="navbar-header pull-left">
+                    <a href="index.html" class="navbar-brand">
+                        <div class="logo"><img src="../assets/images/logo.png" alt="logo" width="50" class="logo-default"> </div>
+                        <small class="logo-name ml-20">ComplyIndia </small>
+                    </a>
+                    <button class="pull-right navbar-toggle navbar-toggle-img collapsed" type="button" data-toggle="collapse" data-target=".navbar-buttons,.navbar-menu">
+                        <span class="sr-only">Toggle user menu</span>
+                        <img src="../assets/images/user.png" alt="Jason's Photo" />
+                    </button>
+                    <button class="pull-right navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#sidebar">
+                        <span class="sr-only">Toggle sidebar</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-buttons navbar-header pull-right  collapse navbar-collapse" role="navigation">
+                    <ul class="nav ace-nav">
+                        <li class="light-blue">
+                            <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                                <img class="nav-user-photo" src="../assets/images/user.png" alt="Jason's Photo" />
+                                <span class="user-info">
+                                    <small>Welcome,</small>
+                                    Jason
+                                </span>
+                                <i class="ace-icon fa fa-caret-down"></i>
+                            </a>
+                            <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                                <li>
+                                    <a href="#">
+                                        <i class="ace-icon fa fa-cog"></i>Settings
+                                    </a>
+                                </li>                                
+                                <li>
+                                    <a href="profile.html">
+                                        <i class="ace-icon fa fa-user"></i>Profile
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#">
+                                        <i class="ace-icon fa fa-power-off"></i>
+                                        Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>              
+            </div><!-- /.navbar-container -->            
+        </div>
+        <!-- Top Navigation Ends-->
+        <!-- Top Menu Navigation Starts-->
+        <div class="main-container" id="main-container">
+            <script type="text/javascript">
+                try {
+                    ace.settings.check('main-container', 'fixed')
+                } catch (e) {
+                }
+            </script>
+            <div id="sidebar" class="sidebar h-sidebar navbar-collapse collapse">
+                <script type="text/javascript">
+                    try {
+                        ace.settings.check('sidebar', 'fixed')
+                    } catch (e) {
+                    }
+                </script>
+                <!-- -->
+                <ul class="nav nav-list">
+                    <li  class="active open hover">
+                        <a href="#">
+                            <i class="menu-icon fa fa-tachometer"></i>
+                            <span class="menu-text"> Dashboard </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="activitylist.html">
+                            <i class="menu-icon fa fa-list-alt"></i>
+                            <span class="menu-text"> Activity List </span>
+                        </a>
+                    </li>
+                    <li class="hover">
+                        <a href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-file"></i>
+                            <span class="menu-text">
+                                Reports
+                            </span>
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+                        <ul class="submenu">
+                            <li class="hover">
+                                <a href="registrationpending.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Registration Pending
+                                </a>
+                            </li>
+                            <li class="hover">
+                                <a href="activitiespending.html">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Activities Pending
+                                </a>
+                            </li>
+                            <li class="hover">
+                                <a href="#monthlymis.hmtl">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Monthly MIS
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="certificate.html">
+                            <i class="menu-icon fa fa-certificate"></i>
+                            <span class="menu-text"> Certificate </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="inspectorvisit.html">
+                            <i class="menu-icon fa fa-pencil-square-o"></i>
+                            <span class="menu-text"> Inspector Visit </span>
+                        </a>
+                    </li>
+                </ul><!-- /.nav-list -->
+                <script type="text/javascript">
+                    try {
+                        ace.settings.check('sidebar', 'collapsed')
+                    } catch (e) {
+                    }
+                </script>
+            </div>
+            <div class="main-content">
+                <div class="main-content-inner">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <h1>  Dashboard  </h1>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <a class="infoarea inbox-v2 infobox-seablue bradius" href="#">
+                                    <div class="inbox-icon">
+                                        <i class="fa fa-list"></i>
+                                    </div>
+                                    <div class="details">
+                                        <div class="number">
+                                            <span data-counter="counterup">90</span>
+                                        </div>
+                                        <div class="desc uppercase"> Registration  Pending </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <a class="infoarea inbox-v2 infobox-red bradius" href="#">
+                                    <div class="inbox-icon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    <div class="details">
+                                        <div class="number">
+                                            <span data-counter="counterup">49</span> </div>
+                                        <div class="desc uppercase"> UpComing Events </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <a class="infoarea inbox-v2 infobox-lightgreen bradius" href="#">
+                                    <div class="inbox-icon">
+                                        <i class="fa fa-thumbs-up"></i>
+                                    </div>
+                                    <div class="details">
+                                        <div class="number">
+                                            <span data-counter="counterup">5</span>
+                                        </div>
+                                        <div class="desc uppercase">Completed </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <a class="infoarea inbox-v2 infobox-purple bradius" href="#">
+                                    <div class="inbox-icon">
+                                        <i class="fa fa-thumbs-down"></i>
+                                    </div>
+                                    <div class="details">
+                                        <div class="number">
+                                            <span data-counter="counterup" >24</span></div>
+                                        <div class="desc uppercase"> Pending </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <!-- PAGE CONTENT BEGINS -->                                
+                                <div class="widget-box seagreen">
+                                    <div class="widget-header seagreen text-center" >
+                                        <h4 class="widget-title">Performance Outlook</h4>  
+                                    </div>
+                                    <div class="widget-body">
+                                        <div class="widget-main ">
+                                            <form class="form-horizontal" role="form" id="viewerdash">
+                                                <div class="form-group ">
+                                                    <div class="col-md-4">
+                                                        <label class="control-label">Company</label>
+                                                        <select class="form-control " >
+                                                            <option value="">All Company</option>
+                                                            <option value="c1">Company1</option>
+                                                            <option value="c2">Company2</option>
+                                                            <option value="c3">Company3</option>
+                                                            <option value="c4">Company4</option>
+                                                        </select>
+                                                    </div>   
+
+                                                    <div class="col-md-4">
+                                                        <label class="control-label">Location</label>
+                                                        <select class="form-control " >
+                                                            <option value="">All Location</option>
+                                                            <option value="l1">Location1</option>
+                                                            <option value="l2">Location2</option>
+                                                            <option value="l3">Location3</option>
+                                                            <option value="l4">Location4</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label class="control-label">Business Area</label>
+                                                        <select class="form-control ">
+                                                            <option value="">All Business Area</option>
+                                                            <option value="fc">Financial Compliance</option>
+                                                            <option value="lc">Labor compliance</option>
+                                                            <option value="sc">Secretarial compliance</option>
+                                                            <option value="ois">Other industries specific</option>
+                                                            <option value="pc">Payroll Compliances</option>
+                                                        </select>
+                                                    </div>   
+                                                </div>
+                                                <label>Range Picker</label> 
+
+
+                                                <div class="row">
+
+                                                <div class="col-md-3">
+                                                  <label>From Date</label>
+                                    <div class="input-group">
+                                    <input name="Fromdate"    class="form-control col-md-3 date-picker fromdate"  type="text" data-date-format="dd-mm-yyyy" id="fromdate" placeholder="dd-mm-yyyy" />
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-calendar bigger-110"></i>
+                                    </span>
+                                   </div>
+                                   </div>
+                                    <div class="col-md-3">
+                                      <label>To Date</label>
+                                   <div class="input-group">
+                                    <input name="todate"    class="form-control date-picker todate"  type="text" data-date-format="dd-mm-yyyy" id="todate"  placeholder="dd-mm-yyyy"  />
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-calendar bigger-110"></i>
+                                       </span>
+                                     </div>
+                                     </div>
+                                     </div>
+                                                <!-- div class="input-daterange input-group col-md-6">
+                                                    <input type="text" class="input-sm form-control" name="start" />
+                                                    <span class="input-group-addon">
+                                                        <i class="fa fa-exchange"></i>
+                                                    </span>
+                                                    <input type="text" class="input-sm form-control" name="end" />
+                                                </div>          -->                                   
+                                                <button type="button" class="btn btn-yellow btn-sm gobutton" id="go">Go</button>                                               
+                                            </form>                                                   
+                                            <div class="hr hr8 hr-double"></div>
+                                            <script src="../assets/js/highcharts.js"></script>
+                                            <script src="../assets/js/exporting.js"></script>
+                                            <div id="container"  data-highcharts-chart="0" class="chart">
+                                                <div class="highcharts-container" id="highcharts-0"> 
+                                                    <svg version="1.1" style="font-family:'Lucida Grande','Lucida Sans Unicode', Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="548" height="398">
+                                                    <desc>Created with Highcharts 4.2.6</desc>
+                                                    <defs>
+                                                    <clipPath id="highcharts-1">
+                                                        <rect x="0" y="0" width="528" height="289"></rect>
+                                                    </clipPath>
+                                                    </defs>
+                                                    <rect x="0" y="0" width="548" height="398" fill="#FFFFFF" class=" highcharts-background"></rect>
+                                                    <g class="highcharts-series-group">
+                                                    <path fill="#f9d504" fill-opacity="0.25" d="M 0 0"></path>
+                                                    <g class="highcharts-series highcharts-series-0 highcharts-tracker" transform="translate(10,53) scale(1 1)" style="cursor:pointer;">
+                                                    <path fill="#4eb353" d="M 263.9728096273067 12.000002768975179 A 133.5 133.5 0 1 1 133.4721677750083 117.48687781334583 L 264 145.5 A 0 0 0 1 0 264 145.5 Z" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" transform="translate(0,0)"></path>
+                                                    <path fill="#f9d504" d="M 133.50024615643676 117.35636400943541 A 133.5 133.5 0 0 1 137.0029714792525 104.34171107904939 L 264 145.5 A 0 0 0 0 0 264 145.5 Z" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" transform="translate(0,0)"></path>
+                                                    <path fill="#e20507" d="M 137.0441932598227 104.21473465083758 A 133.5 133.5 0 0 1 263.81457117826744 12.000128778518757 L 264 145.5 A 0 0 0 0 0 264 145.5 Z" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" transform="translate(0,0)"></path>
+                                                    </g>
+                                                    <g class="highcharts-markers highcharts-series-0" transform="translate(10,53) scale(1 1)"></g>                                                    
+                                                    </g>
+                                                    <g class="highcharts-button" style="cursor:default;" stroke-linecap="round" transform="translate(514,10)">
+                                                    <title>Chart context menu</title>
+                                                    <rect x="0.5" y="0.5" width="24" height="22" fill="white" stroke="none" stroke-width="1" rx="2" ry="2"></rect>
+                                                    <path fill="#E0E0E0" d="M 6 6.5 L 20 6.5 M 6 11.5 L 20 11.5 M 6 16.5 L 20 16.5" stroke="#666" stroke-width="3"></path>
+                                                    <text x="0" style="color:black;fill:black;" y="12"></text>
+                                                    </g>
+                                                    <text x="274" text-anchor="middle" class="highcharts-title" style="color:#333333;font-size:18px;fill:#333333;width:484px;" y="24"><tspan>Dion Global Solutions Ltd-Performance Outlook</tspan></text>
+                                                    <g class="highcharts-data-labels highcharts-series-0 highcharts-tracker" transform="translate(10,53) scale(1 1)" opacity="1" style="cursor:pointer;">
+                                                    <path fill="none" d="M 371.71396955783746 272.7088458310649 C 366.71396955783746 272.7088458310649 361.6882095794724 266.4845597965174 354.77778960922035 257.9261664990145 L 347.8673696389683 249.36777320151168" stroke="#4eb353" stroke-width="1"></path>
+                                                    <path fill="none" d="M 101.13116952735163 102.95963839836082 C 106.13116952735163 102.95963839836082 113.85563829665554 105.04112398131565 124.4767828544484 107.90316665787853 L 135.09792741224126 110.76520933444141" stroke="#f9d504" stroke-width="1"></path>
+                                                    <path fill="none" d="M 162.89711125018067 13.22572141969611 C 167.89711125018067 13.22572141969611 172.59939326852043 19.697857374695687 179.06503104373763 28.59704431282011 L 185.53066881895484 37.49623125094453" stroke="#e20507" stroke-width="1"></path>
+                                                    <g style="cursor:pointer;" transform="translate(377,263)"><text x="5" style="font-size:11px;font-weight:bold;color:#000000;text-shadow:0 0 6px #FFFFFF, 0 0 3px #FFFFFF;fill:#000000;text-rendering:geometricPrecision;" y="16"><tspan style="font-weight:bold">Completed</tspan><tspan dx="0">: 78.4 %</tspan></text></g>
+                                                    <g style="cursor:pointer;" transform="translate(4,93)"><text x="5" style="font-size:11px;font-weight:bold;color:#000000;text-shadow:0 0 6px #FFFFFF, 0 0 3px #FFFFFF;fill:#000000;text-rendering:geometricPrecision;" y="16"><tspan style="font-weight:bold">Delayed</tspan><tspan dx="0">: 1.6 %</tspan></text></g>
+                                                    <g style="cursor:pointer;" transform="translate(59,3)"><text x="5" style="font-size:11px;font-weight:bold;color:#000000;text-shadow:0 0 6px #FFFFFF, 0 0 3px #FFFFFF;fill:#000000;text-rendering:geometricPrecision;" y="16"><tspan style="font-weight:bold">Pending</tspan><tspan dx="0">: 20.0 %</tspan></text></g>
+                                                    </g>
+                                                    <g class="highcharts-legend" transform="translate(91,354)">
+                                                    <g>
+                                                    <g>
+                                                    <g class="highcharts-legend-item" transform="translate(8,3)"><text x="21" style="color:#333333;font-size:12px;font-weight:bold;cursor:pointer;fill:#333333;" text-anchor="start" y="15"><tspan>Completed (145)</tspan></text><rect x="0" y="4" width="16" height="12" fill="#4eb353"></rect>
+                                                    </g>
+                                                    <g class="highcharts-legend-item" transform="translate(150.890625,3)">
+                                                    <text x="21" y="15" style="color:#333333;font-size:12px;font-weight:bold;cursor:pointer;fill:#333333;" text-anchor="start">
+                                                    <tspan>Delayed (3)</tspan>
+                                                    </text><rect x="0" y="4" width="16" height="12" fill="#f9d504"></rect></g><g class="highcharts-legend-item" transform="translate(260.609375,3)">
+                                                    <text x="21" y="15" style="color:#333333;font-size:12px;font-weight:bold;cursor:pointer;fill:#333333;" text-anchor="start"><tspan>Pending (37)</tspan></text><rect x="0" y="4" width="16" height="12" fill="#e20507"></rect></g>
+                                                    </g>
+                                                    </g>
+                                                    </g>
+                                                    <g class="highcharts-tooltip" style="cursor:default;padding:0;pointer-events:none;white-space:nowrap;" transform="translate(38,-9999)" opacity="0" visibility="visible">
+                                                    <path fill="none" d="M 3.5 0.5 L 95.5 0.5 C 98.5 0.5 98.5 0.5 98.5 3.5 L 98.5 44.5 C 98.5 47.5 98.5 47.5 95.5 47.5 L 3.5 47.5 C 0.5 47.5 0.5 47.5 0.5 44.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" isShadow="true" stroke="black" stroke-opacity="0.049999999999999996" stroke-width="5" transform="translate(1, 1)"></path>
+                                                    <path fill="none" d="M 3.5 0.5 L 95.5 0.5 C 98.5 0.5 98.5 0.5 98.5 3.5 L 98.5 44.5 C 98.5 47.5 98.5 47.5 95.5 47.5 L 3.5 47.5 C 0.5 47.5 0.5 47.5 0.5 44.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" isShadow="true" stroke="black" stroke-opacity="0.09999999999999999" stroke-width="3" transform="translate(1, 1)"></path>
+                                                    <path fill="none" d="M 3.5 0.5 L 95.5 0.5 C 98.5 0.5 98.5 0.5 98.5 3.5 L 98.5 44.5 C 98.5 47.5 98.5 47.5 95.5 47.5 L 3.5 47.5 C 0.5 47.5 0.5 47.5 0.5 44.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" isShadow="true" stroke="black" stroke-opacity="0.15" stroke-width="1" transform="translate(1, 1)"></path>
+                                                    <path fill="rgba(249, 249, 249, .85)" d="M 3.5 0.5 L 95.5 0.5 C 98.5 0.5 98.5 0.5 98.5 3.5 L 98.5 44.5 C 98.5 47.5 98.5 47.5 95.5 47.5 L 3.5 47.5 C 0.5 47.5 0.5 47.5 0.5 44.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" stroke="#f9d504" stroke-width="1"></path><text x="8" style="font-size:12px;color:#333333;fill:#333333;" y="20">
+                                                    <tspan style="font-size: 10px">Delayed</tspan>
+                                                    <tspan style="fill:#f9d504" x="8" dy="15">●</tspan><tspan dx="0"> Activities: </tspan>
+                                                    <tspan style="font-weight:bold" dx="0">3</tspan></text></g>
+                                                    <text x="538" text-anchor="end" style="cursor:pointer;color:#909090;font-size:9px;fill:#909090;" y="393">                                                        
+                                                    </text></svg></div></div>      
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PAGE CONTENT ENDS -->
+                            </div>
+                            <div class="col-md-6">
+                                <!-- PAGE CONTENT BEGINS -->                                
+                                <div class="widget-box seagreen">
+                                    <div class="widget-header seagreen text-center" >
+                                        <h4 class="widget-title">News</h4>  
+                                    </div>
+                                    <div class="widget-body overflow-yscroll">
+                                        <div class="widget-main ">  
+                                            <div id="profile-feed-1" class="profile-feed">
+                                                <div class="profile-activity clearfix">
+                                                    <div>
+                                                        <div class="time">
+                                                            <i class="ace-icon fa fa-clock-o bigger-110"></i>
+                                                            5 hours ago
+                                                        </div>
+                                                        <i class="pull-left thumbicon fa fa-check btn-success no-hover"></i>
+                                                        <a class="user" href="#">Chattisgarh Minimum Wages Notification Effective 01/04/2017 </a>
+                                                        <p class="readmore">Chattisgarh Minimum Wages Notification for the period 01/04/2017 to 30/09/2017</p>                                                       
+
+                                                    </div>
+                                                    <div class="tools action-buttons">
+                                                        <a class="blue" href="#newsinbrief" role="button" data-toggle="modal">
+                                                            Read More <i class="fa fa-angle-double-right fulldetails" aria-hidden="true"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="profile-activity clearfix">
+                                                    <div>
+                                                        <div class="time">
+                                                            <i class="ace-icon fa fa-clock-o bigger-110"></i>
+                                                            5 hours ago
+                                                        </div>
+                                                        <i class="pull-left thumbicon fa fa-picture-o btn-info no-hover"></i>
+                                                        <a class="user" href="#">Chattisgarh Minimum Wages Notification Effective 01/04/2017 </a>
+                                                        <p class="readmore">Chattisgarh Minimum Wages Notification for the period 01/04/2017 to 30/09/2017</p>                                                       
+                                                    </div>
+                                                    <div class="tools action-buttons">
+                                                        <a href="#newsinbrief" role="button" data-toggle="modal" class="blue">
+                                                            Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="profile-activity clearfix">
+                                                    <div>
+                                                        <div class="time">
+                                                            <i class="ace-icon fa fa-clock-o bigger-110"></i>
+                                                            8 hours ago
+                                                        </div>
+                                                        <img class="pull-left" alt="News" src="../assets/images/logo.png" />
+                                                        <a class="user" href="#">Chattisgarh Minimum Wages Notification Effective 01/04/2017 </a>
+                                                        <p class="readmore">Karnataka Government has Issued a Gazette Notification On Monday, 27th March 2017 
+                                                            enhancing the retirement age from 58 to 60 years for Private Sector Employees. 
+                                                            This amendment is effective from Monday, 27.03.2017 and The Industrial 
+                                                            Establishments Standing Orders Act also has been amended forthwith.</p>                                                        
+                                                    </div>
+
+                                                    <div class="tools action-buttons">
+                                                        <a class="blue" href="#newsinbrief" role="button" data-toggle="modal">
+                                                            Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="profile-activity clearfix">
+                                                    <div>
+                                                        <div class="time">
+                                                            <i class="ace-icon fa fa-clock-o bigger-110"></i>
+                                                            11 hours ago
+                                                        </div>
+                                                        <i class="pull-left thumbicon fa fa-pencil-square-o btn-pink no-hover"></i>
+                                                        <a class="user" href="#">Chattisgarh Minimum Wages Notification Effective 01/04/2017 </a>
+                                                        <p class="readmore">Karnataka Government has Issued a Gazette Notification On Monday, 27th March 2017 
+                                                            enhancing the retirement age from 58 to 60 years for Private Sector Employees. 
+                                                            This amendment is effective from Monday, 27.03.2017 and The Industrial 
+                                                            Establishments Standing Orders Act also has been amended forthwith.</p>                                                        
+                                                    </div>
+                                                    <div class="tools action-buttons">
+                                                        <a href="#newsinbrief" role="button" data-toggle="modal" class="blue">
+                                                            Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="profile-activity clearfix">
+                                                    <div>
+                                                        <div class="time">
+                                                            <i class="ace-icon fa fa-clock-o bigger-110"></i>
+                                                            12 hours ago
+                                                        </div>
+                                                        <img class="pull-left" alt="Alex Doe's avatar" src="../assets/images/logo.png" />
+                                                        <a class="user" href="#">Chattisgarh Minimum Wages Notification Effective 01/04/2017 </a>
+                                                        <p class="readmore">Chattisgarh Minimum Wages Notification for the period 01/04/2017 to 30/09/2017</p>                                                       
+                                                    </div>
+
+                                                    <div class="tools action-buttons">
+                                                        <a href="#newsinbrief" role="button" data-toggle="modal" class="blue">
+                                                            Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="profile-activity clearfix">
+                                                    <div>
+                                                        <div class="time">
+                                                            <i class="ace-icon fa fa-clock-o bigger-110"></i>
+                                                            12 hours ago
+                                                        </div>
+                                                        <i class="pull-left thumbicon fa fa-key btn-info no-hover"></i>
+                                                        <a class="user" href="#">Chattisgarh Minimum Wages Notification Effective 01/04/2017 </a>
+                                                        <p class="readmore">Chattisgarh Minimum Wages Notification for the period 01/04/2017 to 30/09/2017</p>                                                       
+
+                                                    </div>
+                                                    <div class="tools action-buttons">
+                                                        <a href="#newsinbrief" role="button" data-toggle="modal" class="blue">
+                                                            Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="profile-activity clearfix">
+                                                    <div>
+                                                        <div class="time">
+                                                            <i class="ace-icon fa fa-clock-o bigger-110"></i>
+                                                            12 hours ago
+                                                        </div>
+                                                        <i class="pull-left thumbicon fa fa-key btn-info no-hover"></i>
+                                                        <a class="user" href="#">Chattisgarh Minimum Wages Notification Effective 01/04/2017 </a>
+                                                        <p class="readmore">Chattisgarh Minimum Wages Notification for the period 01/04/2017 to 30/09/2017</p>                                                       
+
+                                                    </div>
+                                                    <div class="tools action-buttons">
+                                                        <a href="#newsinbrief" role="button" data-toggle="modal" class="blue">
+                                                            Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="profile-activity clearfix">
+                                                    <div>
+                                                        <div class="time">
+                                                            <i class="ace-icon fa fa-clock-o bigger-110"></i>
+                                                            12 hours ago
+                                                        </div>
+                                                        <i class="pull-left thumbicon fa fa-key btn-info no-hover"></i>
+                                                        <a class="user" href="#">Chattisgarh Minimum Wages Notification Effective 01/04/2017 </a>
+                                                        <p class="readmore">Chattisgarh Minimum Wages Notification for the period 01/04/2017 to 30/09/2017</p>                                                       
+
+                                                    </div>
+                                                    <div class="tools action-buttons">
+                                                        <a href="#newsinbrief" role="button" data-toggle="modal" class="blue">
+                                                            Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PAGE CONTENT ENDS -->
+                            </div>
+                        </div><!-- /.row -->
+                    </div><!-- /.page-content -->
+                </div>
+                <!-- Modal -->
+                <div id="newsinbrief" class="modal fulldetails" tabindex="-1">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">                                     
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="blue bigger col-md-10">Chattisgarh Minimum Wages Notification Effective 01/04/2017</h4>
+
+                                <button class="btn btn-sm btn-inverse no-border col-md-1" id="backeditbusinessarea">8/6/2017</button>
+
+                            </div>
+                            <div class="modal-body passwordaddscroll">
+                                <div class="row">                                                   
+                                    <div class="col-xs-12 col-sm-7 col-md-12">
+                                        <div class="col-xs-12 col-sm-7 col-md-4">
+                                            <img class="pull-left borderimage" alt="Alex Doe's avatar" src="../assets/images/logo.png" width="150"/>                                                     
+                                        </div>
+                                        <p>Chattisgarh Minimum Wages Notification for the period 01/04/2017 to 30/09/2017
+                                            Chattisgarh Minimum Wages Notification for the period 01/04/2017 to 30/09/2017
+                                            Chattisgarh Minimum Wages Notification for the period 01/04/2017 to 30/09/2017</p>
+                                        <div class="hr hr-18 dotted hr-double"></div>
+                                        <b>Source:</b> <a href=""><i class="fa fa-file-pdf-o fa-2x"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                 <button class="btn btn-success btn-sm" data-dismiss="modal">
+                                    <i class="ace-icon fa fa-check"></i>
+                                    OKay
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+            </div><!-- /.main-content -->            
+            <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+                <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+            </a>
+        </div><!-- /.main-container -->
+        <!-- basic scripts -->
+        <!--[if !IE]> -->        
+        <script src="../assets/js/jquery.min.js"></script>        
+        <!-- <![endif]-->
+        <!--[if IE]>
+            <script src="../assets/js/jquery.1.11.1.min.js"></script>
+        <![endif]-->
+        <!--[if IE]>
+        <script type="text/javascript">
+            window.jQuery || document.write("<script src='../assets/js/jquery1x.min.js'>"+"<"+"/script>");
+        </script>
+        <![endif]-->
+        <script src="../assets/js/bootstrap.min.js"></script>
+        <!-- page specific plugin scripts -->
+        <!-- ace scripts -->
+        <script src="../assets/js/ace-elements.min.js"></script>
+        <script src="../assets/js/ace.min.js"></script>
+        <script src="../assets/js/ui-blockui.min.js" type="text/javascript"></script>
+        <script src="../assets/js/bootstrap-datepicker.min.js"></script>
+        <!-- inline scripts related to this page -->
+        <script type="text/javascript">
+                    /* Date Range */
+                    $('.input-daterange').datepicker({autoclose: true});
+        </script>  
+         <script type="text/javascript">
+                    /* Date Range */
+
+                    $('.date-picker').datepicker({
+                                            autoclose: true,
+                                            todayHighlight: true
+                                            });
+
+                $('.date-picker').focus(function(e){
+                    var min = $(this).attr('min');
+                    if(min != '' && min != undefined){
+                        $(this).datepicker('setStartDate', new Date(min));
+                    }
+                });
+
+                $(document).on("focus", ".date-picker", function(){
+                    $(this).datepicker();
+                    var min = $(this).attr('min');
+                    if(min != '' && min != undefined){
+                        $(this).datepicker('setStartDate', new Date(min));
+                    }
+                });
+
+                $('.fromdate').on('change', function () {
+                    var date = $(this).val();
+                    if (date !== ''){
+                        var cdate = date.split('-');
+                        var da = cdate[2]+'-'+cdate[1]+'-'+cdate[0];
+                        $(".todate").attr('min',da);
+                        $(".todate").prop('disabled', false);
+                    }else{
+                        $(".todate").val('');
+                        $(".todate").attr('min','');
+                        $(".todate").prop('disabled', true);
+                    }
+                });
+
+        $(document).on('focus','.date-picker',function(){
+
+                $(this).blur();
+            })
+
+        $("#go").on('click',function(e){
+   var isValid = true;
+   $('#viewerdash input[type="text"]').each(function(){
+     if($(this).val() === '')
+     {
+       isValid = false;
+       $(this).parent('.input-group').addClass('has-error');
+     }
+       else {
+                 $(this).parent('.input-group').removeClass('has-error');
+         }
+       });
+       alert(isValid)
+if(isValid == false){
+  e.preventDefault();
+}
+else {}
+     });
+     $('.input-group').on('click', function(){
+       $(this).removeClass('has-error')     });
+</script>        
+    </body>
+</html>
