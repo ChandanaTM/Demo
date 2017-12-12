@@ -1,0 +1,1944 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Meta Tag -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />        
+        <title>ComplyIndia | Admin Dashboard</title>
+        <!-- bootstrap & fontawesome -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="assets/css/custom.css" />
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="assets/css/chosen.min.css" />      
+        <link rel="stylesheet" href="assets/css/datepicker.min.css" /> 
+        <!-- page specific plugin styles -->
+        <!-- text fonts -->
+        <link rel="stylesheet" href="assets/fonts/fonts.googleapis.com.css" />
+        <!-- ace styles -->
+        <link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+        <!--[if lte IE 9]>
+                <link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+        <![endif]-->
+        <!--[if lte IE 9]>
+          <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+        <![endif]-->
+        <!-- inline styles related to this page -->
+        <!-- ace settings handler -->
+        <!--<script src="assets/js/ace-extra.min.js"></script>-->
+        <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+        <!--[if lte IE 8]>
+        <script src="assets/js/html5shiv.min.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="no-skin">
+        <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+            <div class="navbar-container" id="navbar-container">
+                <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+                    <span class="sr-only">Toggle sidebar</span>
+
+                    <span class="icon-bar"></span>
+
+                    <span class="icon-bar"></span>
+
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-header pull-left">
+                    <a href="index.html" class="navbar-brand"> 
+                        <div class="logo"><img src="assets/images/logo.png" alt="logo" class="logo-default"  width="60"> </div>
+                        <small class="logo-name">ComplyIndia </small>
+                    </a> 
+                </div>
+                <div class="navbar-buttons navbar-header pull-right" role="navigation">
+                    <ul class="nav ace-nav">			
+                        <li class="light-blue">
+                            <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                                <img class="nav-user-photo" src="assets/images/user.jpg" alt="Jason's Photo" />
+                                <span class="user-info">
+                                    <small>Welcome,</small>
+                                    Jason
+                                </span>
+                                <i class="ace-icon fa fa-caret-down"></i>
+                            </a>
+                            <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                                <li>
+                                    <a href="#">
+                                        <i class="ace-icon fa fa-cog"></i>
+                                        Settings
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="profile.html">
+                                        <i class="ace-icon fa fa-user"></i>
+                                        Profile
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#">
+                                        <i class="ace-icon fa fa-power-off"></i>
+                                        Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- /.navbar-container -->
+        </div>
+        <div class="main-container" id="main-container">
+            <div id="sidebar" class="sidebar  sidebar-fixed responsive">   
+                <ul class="nav nav-list">
+                    <li>
+                        <a href="index.html">
+                            <i class="menu-icon fa fa-tachometer"></i>
+                            <span class="menu-text"> Admin Panel </span>
+                        </a>                       
+                    </li>
+                    <li class="active">   
+                        <a href="#">
+                            <i class="menu-icon fa fa-gavel"></i>
+                            <span class="menu-text"> Act </span>
+                            <b class="arrow"></b>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="business.html">
+                            <i class="menu-icon fa fa-briefcase"></i>
+                            <span class="menu-text"> Business Area </span>
+                        </a>
+                    </li>
+                    <li> 
+                        <a href="company.html">
+                            <i class="menu-icon fa fa-cog"></i>
+                            <span class="menu-text"> Company Types </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="companylist.html">
+                            <i class="menu-icon fa fa-building"></i>
+                            <span class="menu-text"> Companies </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="industries.html">
+                            <i class="menu-icon fa fa-industry"></i>
+                            <span class="menu-text"> Industries </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="state.html">
+                            <i class="menu-icon fa fa-map-o"></i>
+                            <span class="menu-text"> State </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="city.html">
+                            <i class="menu-icon fa fa-map-marker"></i>
+                            <span class="menu-text"> City </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="user.html">
+                            <i class="menu-icon fa fa-user"></i>
+                            <span class="menu-text"> Users </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="news.html">
+                            <i class="menu-icon fa fa-newspaper-o"></i>
+                            <span class="menu-text"> News </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="subscribe.html">
+                            <i class="menu-icon fa fa-files-o"></i>
+                            <span class="menu-text"> Subscription </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="formats.html">
+                            <i class="menu-icon fa fa-database"></i>
+                            <span class="menu-text"> Formats </span>
+                        </a>
+                    </li>
+                </ul><!-- /.nav-list -->
+                <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+                    <i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+                </div>
+                <script type="text/javascript">
+                    try {
+                        ace.settings.check('sidebar', 'collapsed')
+                    } catch (e) {
+                    }
+                </script>
+            </div>
+            <div class="main-content">
+                <div class="main-content-inner">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <h1>  Act  </h1>
+                        </div><!-- /.page-header -->
+                        <div class="row">                           
+                            <div class="col-xs-12">
+                                <!-- Error Msg -->
+                                <div class="alert alert-success displaynone" id="successerrormsg">
+                                    <button type="button" class="close" data-dismiss="alert">
+                                        <i class="ace-icon fa fa-times"></i>
+                                    </button>                              
+                                    <p> <span class="h4">Act</span> is added successfully</p>   
+                                </div>
+                                <div class="alert alert-warning displaynone" id="updateerrormsg">
+                                    <button type="button" class="close" data-dismiss="alert">
+                                        <i class="ace-icon fa fa-times"></i>
+                                    </button>                              
+                                    <p> <span class="h4">Act</span> is updated successfully</p>   
+                                </div>
+                                <div class="alert alert-danger displaynone" id="deleteerrormsg">
+                                    <button type="button" class="close" data-dismiss="alert">
+                                        <i class="ace-icon fa fa-times"></i>
+                                    </button>                              
+                                    <p> <span class="h4">Act</span> is deleted successfully</p>   
+                                </div>
+                                <!-- Error Msg ENDS -->
+                                <!-- PAGE CONTENT BEGINS -->
+                                <!-- Adding Act Starts -->
+                                <div class="widget-box light bordered displaynone" id="createacts">
+                                    <div class="widget-header">
+                                        <div class="caption font-green">
+                                            <i class="fa fa-gavel font-green"></i>
+                                            <span class="caption-subject bold uppercase"> Add Act</span>
+                                        </div> 
+                                        <span class="widget-toolbar">
+                                            <button class="btn btn-sm btn-inverse no-border" id="backacts">Back</button>
+                                        </span>
+                                    </div>
+                                    <div class="widget-body form">   
+                                        <form class="form-horizontal form-bordered" role="form">
+                                            <div class="form-body">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <!-- PAGE CONTENT BEGINS -->                                                
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Name <span class="mandatory">*</span> </label>
+                                                            <div class="col-sm-9">
+                                                                <span class="block input-icon input-icon-right">
+                                                                    <input type="text" placeholder="Act Name" class="form-control col-md-12 actname"  />
+                                                                    <i class="ace-icon fa fa-info-circle col-sm-1 blue" id="hide-option" title="Act Name : A.p Factories & Establishment (national, Festival & Other Holidays) Rules, 1974" ></i>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1-1"> Applicable Industry  <span class="mandatory">*</span>   
+                                                                <br><br>
+                                                                <label class="middle">
+                                                                    <input class="ace" type="checkbox" id="allindustry">
+                                                                    <span class="lbl"> All Industries </span>
+                                                                </label>                                                   
+                                                            </label>
+                                                            <div class="col-sm-9">
+                                                                <select multiple="" class="chosen-select form-control tag-input-style industry" id="industriesapplicable"  data-placeholder="Choose a  Industry ...">
+                                                                    <option value="AL">BPO, Software Development & IT Services</option>
+                                                                    <option value="AK">Building Construction Company</option>
+                                                                    <option value="AZ">Clinical Trial Services</option>
+                                                                    <option value="AR">Consulting Services</option>
+                                                                    <option value="CA">Education Services</option>
+                                                                    <option value="CO">Electronics &amp; Telecommunications</option>
+                                                                    <option value="CT">Factory as per Factories Act</option>
+                                                                    <option value="DE">Food & Beverages</option>
+                                                                    <option value="FL">Health care Products and Services</option>
+                                                                    <option value="GA">Hotel Industry</option>
+                                                                    <option value="HI">HR Services</option>
+                                                                    <option value="ID">Movies, Cinema & Film Industry</option>
+                                                                    <option value="IL">Newsprint Industry</option>
+                                                                    <option value="IN">Office & Infrastructure Services</option>
+                                                                    <option value="IA">Payroll Services</option>
+                                                                    <option value="KS">Pharmaceutical Industry</option>
+                                                                    <option value="KY">Retail / Wolesale Trading</option>
+                                                                    <option value="LA">Security Agency Services</option>
+                                                                    <option value="ME">Shipping Company & Port Services</option>
+                                                                    <option value="MD">Transportation Services Company</option>
+                                                                    <option value="MA">Venture Capital & Advisory</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> Applicable Company Type <span class="mandatory">*</span>
+                                                                <br><br>
+                                                                <label class="middle">
+                                                                    <input class="ace" type="checkbox" id="id-check-company">
+                                                                    <span class="lbl"> All Company Type </span>
+                                                                </label>
+                                                            </label>
+                                                            <div class="col-sm-9">
+                                                                <select multiple="" class="chosen-select form-control tag-input-style companytype" id="companytypeapplicable" data-placeholder="Choose a  Company Type ...">
+                                                                    <option value="AL">Hindu Undivided Family (HUF)</option>
+                                                                    <option value="AK">Limited Liability Partnership</option>
+                                                                    <option value="AZ">Partnership Firm</option>
+                                                                    <option value="AR">Private Limited Company</option>
+                                                                    <option value="CA">Public Limited Company</option>
+                                                                    <option value="CO">Trust</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label no-padding-right" for="form-input-readonly"> Business Area <span class="mandatory">*</span></label>
+                                                            <div class="col-sm-9">
+                                                                <select class="form-control businessarea" id="form-field-select-1">
+                                                                    <option value="">-- Select Compliance --</option>
+                                                                    <option value="FC">Financial Compliance</option>
+                                                                    <option value="LC">Labour Compliance</option>
+                                                                    <option value="IS">Other Industrial Specific</option>
+                                                                    <option value="PC">Payroll Compliance </option>
+                                                                    <option value="SC">Secretarial Compliance</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label no-padding-right" for="form-field-6">Central and State <span class="mandatory">*</span></label>
+                                                            <div class="col-sm-9">
+                                                                <div class="radio-inline">
+                                                                    <label>
+                                                                        <input name="centralandstate" type="radio" class="ace central centralandstate" id="central"  value="central">
+                                                                        <span class="lbl"> Central</span>
+                                                                    </label>                                                                  
+                                                                </div>     
+                                                                <div class="radio-inline">
+                                                                    <label>
+                                                                        <input name="centralandstate" type="radio" class="ace state centralandstate" id="state" value="state">
+                                                                        <span class="lbl"> State </span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label no-padding-right" >Applicable States <span class="mandatory">*</span></label>
+                                                            <div class="col-sm-5">
+                                                                <div class="radio">
+                                                                    <label>
+                                                                        <input name="applicablestates" type="radio"  class="ace stateoption allstate applicablestate" id="allstateselect" value="allstate">
+                                                                        <span class="lbl"> Setup for All States  </span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="radio">
+                                                                    <label>
+                                                                        <input name="applicablestates" type="radio" class="ace stateoption multistates applicablestate" id="multistateselect" value="multistates">
+                                                                        <span class="lbl"> Setup for Multiple State(s) </span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="radio">
+                                                                    <label>
+                                                                        <input name="applicablestates" type="radio"  class="ace stateoption singlestate applicablestate" id="singlestateselect" value="singlestate">
+                                                                        <span class="lbl"> Setup for Single State </span>
+                                                                    </label>
+                                                                </div>
+                                                            </div> 
+                                                            <div class="col-md-4">
+                                                                <select class="form-control singlestatebox" >
+                                                                    <option value="">-- Select --</option>
+                                                                    <option value="AL">karnataka</option>
+                                                                    <option value="AK">kerela</option>
+                                                                    <option value="AZ">Tamil Nadu</option>
+                                                                    <option value="AR">Maharashtra</option>
+                                                                    <option value="CA">karnataka</option>
+                                                                    <option value="CO">kerela</option>
+                                                                    <option value="CT">Tamil Nadu</option>
+                                                                    <option value="DE">Maharashtra</option>
+                                                                </select>
+                                                                <div class="multistatebox">                                                           
+                                                                    <select multiple="" class="chosen-select form-control tag-input-style" data-placeholder="Choose a State...">
+                                                                        <option value="AL">karnataka</option>
+                                                                        <option value="AK">kerela</option>
+                                                                        <option value="AZ">Tamil Nadu</option>
+                                                                        <option value="AR">Maharashtra</option>
+                                                                        <option value="CA">karnataka</option>
+                                                                        <option value="CO">kerela</option>
+                                                                        <option value="CT">Tamil Nadu</option>
+                                                                        <option value="DE">Maharashtra</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="commonsettings">
+                                                            <div class="form-group">
+                                                                <label class="col-sm-2 control-label no-padding-right"> Registration applicable </label>
+                                                                <div class="col-sm-4">
+                                                                    <select class="form-control registrationapplicable">
+                                                                        <option value="">-- Select --</option>
+                                                                        <option value="Yes">Yes</option>
+                                                                        <option value="No">No</option>
+                                                                    </select>
+                                                                </div>
+                                                                <label class="col-sm-2 control-label no-padding-right"> Sub Location </label>
+                                                                <div class="col-sm-4">
+                                                                    <select class="form-control" id="sublocation">
+                                                                        <option value="">-- Select --</option>
+                                                                        <option value="state">State</option>
+                                                                        <option value="city">City</option>
+                                                                        <option value="address">Address</option>
+                                                                        <option value="notapplicable">Not Applicable</option>
+                                                                    </select>
+                                                                </div>                                                    
+                                                            </div>  
+                                                        </div>                                       
+                                                        <div class="activitytable">
+                                                            <div class="table" id="no-more-tables">
+                                                                <div class="thead">
+                                                                    <div class="tr">
+                                                                        <div class="col-md-3">
+                                                                            <label>Activity Name</label>
+                                                                        </div>
+                                                                        <div class="col-md-1">
+                                                                            <label>Display</label>
+                                                                        </div>
+                                                                        <!--                                                                        <div class="col-md-2">
+                                                                                                                                                    <label>Month and Date</label>
+                                                                                                                                                </div>-->
+                                                                        <div class="col-md-2">
+                                                                            <label>Month</label>
+                                                                        </div>
+                                                                        <div class="col-md-1">
+                                                                            <label>Dates</label>
+                                                                        </div>
+                                                                        <div class="col-md-2">
+                                                                            <label>Importance Level</label>
+                                                                        </div>
+                                                                        <div class="col-md-2">
+                                                                            <label>Rule Information</label>
+                                                                        </div>
+                                                                        <div class="col-md-1">
+                                                                            <label>Action</label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>                                       
+                                                                <div class="tbody">
+
+                                                                </div>
+                                                            </div>
+                                                        </div> 
+                                                        <div class="wizard-actions addactivityline">
+                                                            <button type="button" class="btn btn-white btn-inverse btn-sm pull-right addactivity"><i class="fa fa-plus"></i> Add Activity</button>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                        <div class="form-group displaynone abstract">
+                                                            <div class="col-md-6">
+                                                                <label class="col-sm-5 control-label no-padding-right abstractavailable">Abstract available </label>
+                                                                <div class="col-sm-7">
+                                                                    <label class="middle">
+                                                                        <input class="ace check-act" type="checkbox"  name="checkact">
+                                                                        <span class="lbl"></span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 displaynone abstractfile">
+                                                                <label class="col-sm-4 control-label no-padding-right ">Abstract file </label>
+                                                                <div class="col-sm-8">
+                                                                    <input type="file" class="abstractuploadfile" />														
+                                                                </div>    
+                                                            </div>                                                                                                               
+                                                        </div> 
+                                                    </div><!-- /.col -->
+                                                </div>
+                                            </div>
+                                            <div class="form-actions text-right">
+                                                <button type="button" class="btn default" id="actcancel"><i class="fa fa-times"></i> Cancel</button>
+                                                <button type="button" class="btn green-jungle" id="actsubmit"><i class="fa fa-paper-plane"></i> Submit</button>
+                                            </div>
+                                        </form>
+                                    </div>   
+                                </div>
+                                <!-- Adding Act Ends -->
+                                <!-- Editing Act Starts Here -->
+                                <div class="widget-box light bordered displaynone" id="editacts">
+                                    <div class="widget-header">
+                                        <div class="caption font-green">
+                                            <i class="fa fa-gavel font-green"></i>
+                                            <span class="caption-subject bold uppercase">Edit Act</span>
+                                        </div> 
+                                        <span class="widget-toolbar">
+                                            <button class="btn btn-sm btn-inverse no-border" id="backeditacts">Back</button>
+                                        </span>                                      
+                                    </div>
+                                    <div class="widget-body form">
+                                        <form class="form-horizontal form-bordered" role="form">
+                                            <div class="form-body">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <!-- PAGE CONTENT BEGINS -->                                                
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Name <span class="mandatory">*</span></label>
+                                                            <div class="col-sm-9">
+                                                                <span class="block input-icon input-icon-right">
+                                                                    <input type="text" placeholder="Act Name" class="form-control editactname"  />
+                                                                    <i class="ace-icon fa fa-info-circle col-sm-1 blue" id="hide-option" title="Act Name : A.p Factories & Establishment (national, Festival & Other Holidays) Rules, 1974" ></i>
+                                                                </span>   
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1-1"> Applicable Industry     
+                                                                <br><br>
+                                                                <label class="middle">
+                                                                    <input class="ace" type="checkbox" id="allindustry">
+                                                                    <span class="lbl"> All Industries</span>
+                                                                </label>                                                   
+                                                            </label>
+                                                            <div class="col-sm-9">
+                                                                <select multiple="" class="chosen-select form-control tag-input-style" id="industriesedit"  data-placeholder="Choose a  Industry ...">
+                                                                    <option value="AL">BPO, Software Development & IT Services</option>
+                                                                    <option value="AK">Building Construction Company</option> 
+                                                                    <option value="AZ">Clinical Trial Services</option>
+                                                                    <option value="AR">Consulting Services</option>
+                                                                    <option value="CA">Education Services</option>
+                                                                    <option value="CO">Electronics &amp; Telecommunications</option>
+                                                                    <option value="CT">Factory as per Factories Act</option>
+                                                                    <option value="DE">Food & Beverages</option>
+                                                                    <option value="FL">Health care Products and Services</option>
+                                                                    <option value="GA">Hotel Industry</option>
+                                                                    <option value="HI">HR Services</option>
+                                                                    <option value="ID">Movies, Cinema & Film Industry</option>
+                                                                    <option value="IL">Newsprint Industry</option>
+                                                                    <option value="IN">Office & Infrastructure Services</option>
+                                                                    <option value="IA">Payroll Services</option>
+                                                                    <option value="KS">Pharmaceutical Industry</option>
+                                                                    <option value="KY">Retail / Wolesale Trading</option>
+                                                                    <option value="LA">Security Agency Services</option>
+                                                                    <option value="ME">Shipping Company & Port Services</option>
+                                                                    <option value="MD">Transportation Services Company</option>
+                                                                    <option value="MA">Venture Capital & Advisory</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> Applicable Company Type 
+                                                                <br><br>
+                                                                <label class="middle">
+                                                                    <input class="ace" type="checkbox" id="id-check-company">
+                                                                    <span class="lbl"> All Company Type </span>
+                                                                </label>
+                                                            </label>
+                                                            <div class="col-sm-9">
+                                                                <select multiple="" class="chosen-select form-control tag-input-style" id="companytypeedit"  data-placeholder="Choose a  Company Type ...">
+                                                                    <option value="AL">Hindu Undivided Family (HUF)</option>
+                                                                    <option value="AK">Limited Liability Partnership</option>
+                                                                    <option value="AZ">Partnership Firm</option>
+                                                                    <option value="AR">Private Limited Company</option>
+                                                                    <option value="CA">Public Limited Company</option>
+                                                                    <option value="CO">Trust</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label no-padding-right" for="form-input-readonly"> Business Area </label>
+                                                            <div class="col-sm-9">
+                                                                <select class="form-control editbusinessarea" id="form-field-select-1">
+                                                                    <option value="">-- Select Compliance --</option>
+                                                                    <option value="FC">Financial Compliance</option>
+                                                                    <option value="LC">Labour Compliance</option>
+                                                                    <option value="IS">Other Industrial Specific</option>
+                                                                    <option value="PC">Payroll Compliance </option>
+                                                                    <option value="SC">Secretarial Compliance</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label no-padding-right" for="form-field-6">Central and State</label>
+                                                            <div class="col-sm-9">
+                                                                <div class="radio-inline">
+                                                                    <label>
+                                                                        <input name="centralandstateedit" type="radio" class="ace centraledit" value="centraledit" checked>
+                                                                        <span class="lbl"> Central</span>
+                                                                    </label>                                                                  
+                                                                </div>     
+                                                                <div class="radio-inline">
+                                                                    <label>
+                                                                        <input name="centralandstateedit" type="radio" class="ace stateedit" value="stateedit">
+                                                                        <span class="lbl"> State </span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label no-padding-top" for="duallist"> States </label>
+                                                            <div class="col-sm-4 applicablestate" >                                                            
+                                                                <h3 class="col-sm-10 col-xs-10  mt">Applicable State</h3>                                                            
+                                                                <!--<div class="col-sm-1 col-xs-1"><button type="button" class="btn btn-danger btn-sm deleteactstate" data-toggle="modal" data-target="#confirmation"><i class="fa fa-trash"></i> </button></div>-->
+                                                                <div class="act-border col-md-12 col-xs-12">
+                                                                    <div class="radio-inline applicableradio-inline">
+                                                                        <label>
+                                                                            <input name="applicablestateradiobutton" type="radio" class="ace appstate" value="centraledit">
+                                                                            <span class="lbl"> Andaman & Nicobar Islands </span>
+                                                                        </label>                                                                  
+                                                                    </div> 
+                                                                    <div class="radio-inline applicableradio-inline">
+                                                                        <label>
+                                                                            <input name="applicablestateradiobutton" type="radio" class="ace appstate" value="centraledit">
+                                                                            <span class="lbl"> Haryana</span>
+                                                                        </label>                                                                  
+                                                                    </div>     
+                                                                    <!--                                                                    <div class="radio-inline ">
+                                                                                                                                            <label>
+                                                                                                                                                <input name="applicablestateradiobutton" type="radio" class="ace appstate" value="centraledit">
+                                                                                                                                                <span class="lbl"> Karnataka</span>
+                                                                                                                                            </label>                                                                  
+                                                                                                                                        </div> 
+                                                                                                                                        <div class="radio-inline ">
+                                                                                                                                            <label>
+                                                                                                                                                <input name="applicablestateradiobutton" type="radio" class="ace appstate" value="stateedit">
+                                                                                                                                                <span class="lbl"> Kerala </span>
+                                                                                                                                            </label>
+                                                                                                                                        </div>
+                                                                                                                                        <div class="radio-inline ">
+                                                                                                                                            <label>
+                                                                                                                                                <input name="applicablestateradiobutton" type="radio" class="ace appstate" value="centraledit">
+                                                                                                                                                <span class="lbl"> Meghalaya</span>
+                                                                                                                                            </label>                                                                  
+                                                                                                                                        </div>     
+                                                                                                                                        <div class="radio-inline ">
+                                                                                                                                            <label>
+                                                                                                                                                <input name="applicablestateradiobutton" type="radio" class="ace appstate" value="centraledit">
+                                                                                                                                                <span class="lbl"> Puducherry</span>
+                                                                                                                                            </label>                                                                  
+                                                                                                                                        </div> -->
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-1 col-xs-5 list-arrows mt-100 ml">
+                                                                <button type="button" class="btn naviorange btn-sm move-left"><i class="fa fa-angle-left"></i> </button>
+                                                                <button type="button" class="btn naviorange btn-sm move-right"><i class="fa fa-angle-right"></i> </button>
+                                                            </div>
+                                                            <div class="col-sm-4 nonapplicablestate" >
+                                                                <h3 class="col-sm-12 mt">Non Applicable State</h3>
+                                                                <div class="act-border col-md-12 col-xs-12">
+                                                                    <div class="radio-inline nonapplicableradio-inline">
+                                                                        <label>
+                                                                            <input name="nonapplicablestateradiobutton" type="radio" class="ace nonappstate" >
+                                                                            <span class="lbl"> Andaman & Nicobar Islands </span>
+                                                                        </label>                                                                  
+                                                                    </div>     
+                                                                    <div class="radio-inline nonapplicableradio-inline">
+                                                                        <label>
+                                                                            <input name="nonapplicablestateradiobutton" type="radio" class="ace nonappstate" >
+                                                                            <span class="lbl"> Arunachal Pradesh </span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="radio-inline nonapplicableradio-inline">
+                                                                        <label>
+                                                                            <input name="nonapplicablestateradiobutton" type="radio" class="ace nonappstate">
+                                                                            <span class="lbl"> Assam</span>
+                                                                        </label>                                                                  
+                                                                    </div>     
+                                                                    <div class="radio-inline nonapplicableradio-inline">
+                                                                        <label>
+                                                                            <input name="nonapplicablestateradiobutton" type="radio" class="ace nonappstate" >
+                                                                            <span class="lbl"> Bihar </span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="radio-inline nonapplicableradio-inline">
+                                                                        <label>
+                                                                            <input name="nonapplicablestateradiobutton" type="radio" class="ace nonappstate" >
+                                                                            <span class="lbl"> Chandigarh</span>
+                                                                        </label>                                                                  
+                                                                    </div> 
+                                                                    <div class="radio-inline nonapplicableradio-inline">
+                                                                        <label>
+                                                                            <input name="nonapplicablestateradiobutton" type="radio" class="ace nonappstate">
+                                                                            <span class="lbl"> Chattisgarh </span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="radio-inline nonapplicableradio-inline">
+                                                                        <label>
+                                                                            <input name="nonapplicablestateradiobutton" type="radio" class="ace nonappstate" >
+                                                                            <span class="lbl"> Daman & Diu</span>
+                                                                        </label>                                                                  
+                                                                    </div>     
+                                                                    <div class="radio-inline nonapplicableradio-inline">
+                                                                        <label>
+                                                                            <input name="nonapplicablestateradiobutton" type="radio" class="ace nonappstate" >
+                                                                            <span class="lbl"> Delhi </span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="radio-inline nonapplicableradio-inline">
+                                                                        <label>
+                                                                            <input name="nonapplicablestateradiobutton" type="radio" class="ace nonappstate" >
+                                                                            <span class="lbl"> Goa</span>
+                                                                        </label>                                                                  
+                                                                    </div>     
+                                                                    <div class="radio-inline nonapplicableradio-inline">
+                                                                        <label>
+                                                                            <input name="nonapplicablestateradiobutton" type="radio" class="ace nonappstate" >
+                                                                            <span class="lbl"> Gujarat </span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="radio-inline nonapplicableradio-inline">
+                                                                        <label>
+                                                                            <input name="nonapplicablestateradiobutton" type="radio" class="ace nonappstate" >
+                                                                            <span class="lbl"> Haryana</span>
+                                                                        </label>                                                                  
+                                                                    </div>     
+                                                                    <div class="radio-inline nonapplicableradio-inline">
+                                                                        <label>
+                                                                            <input name="nonapplicablestateradiobutton" type="radio" class="ace nonappstate">
+                                                                            <span class="lbl"> Himachal Pradesh </span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="radio-inline nonapplicableradio-inline">
+                                                                        <label>
+                                                                            <input name="nonapplicablestateradiobutton" type="radio" class="ace nonappstate">
+                                                                            <span class="lbl"> Jammu & Kashmir</span>
+                                                                        </label>                                                                  
+                                                                    </div>     
+                                                                    <div class="radio-inline nonapplicableradio-inline">
+                                                                        <label>
+                                                                            <input name="nonapplicablestateradiobutton" type="radio" class="ace nonappstate" >
+                                                                            <span class="lbl"> Jharkhand </span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="radio-inline nonapplicableradio-inline">
+                                                                        <label>
+                                                                            <input name="nonapplicablestateradiobutton" type="radio" class="ace nonappstate" >
+                                                                            <span class="lbl"> Karnataka</span>
+                                                                        </label>                                                                  
+                                                                    </div>  
+                                                                    <div class="radio-inline nonapplicableradio-inline">
+                                                                        <label> 
+                                                                            <input name="nonapplicablestateradiobutton" type="radio" class="ace nonappstate" >
+                                                                            <span class="lbl"> Kerala </span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="radio-inline nonapplicableradio-inline">
+                                                                        <label>
+                                                                            <input name="nonapplicablestateradiobutton" type="radio" class="ace nonappstate" >
+                                                                            <span class="lbl"> Lakshwadweep</span>
+                                                                        </label>                                                                  
+                                                                    </div>     
+                                                                    <div class="radio-inline nonapplicableradio-inline">
+                                                                        <label>
+                                                                            <input name="nonapplicablestateradiobutton" type="radio" class="ace nonappstate" >
+                                                                            <span class="lbl"> Madhya Pradesh </span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="radio-inline nonapplicableradio-inline">
+                                                                        <label>
+                                                                            <input name="nonapplicablestateradiobutton" type="radio" class="ace nonappstate" >
+                                                                            <span class="lbl"> Maharashtra</span>
+                                                                        </label>                                                                  
+                                                                    </div>     
+                                                                    <div class="radio-inline nonapplicableradio-inline">
+                                                                        <label>
+                                                                            <input name="nonapplicablestateradiobutton" type="radio" class="ace nonappstate" >
+                                                                            <span class="lbl"> Manipur </span>
+                                                                        </label>
+                                                                    </div>
+
+
+                                                                    <div class="radio-inline nonapplicableradio-inline">
+                                                                        <label>
+                                                                            <input name="nonapplicablestateradiobutton" type="radio" class="ace nonappstate">
+                                                                            <span class="lbl"> Meghalaya</span>
+                                                                        </label>                                                                  
+                                                                    </div>     
+                                                                    <div class="radio-inline nonapplicableradio-inline">
+                                                                        <label>
+                                                                            <input name="nonapplicablestateradiobutton" type="radio" class="ace nonappstate">
+                                                                            <span class="lbl"> Mizoram </span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="radio-inline nonapplicableradio-inline">
+                                                                        <label>
+                                                                            <input name="nonapplicablestateradiobutton" type="radio" class="ace nonappstate" >
+                                                                            <span class="lbl"> Nagaland</span>
+                                                                        </label>                                                                  
+                                                                    </div>     
+                                                                    <div class="radio-inline nonapplicableradio-inline">
+                                                                        <label>
+                                                                            <input name="nonapplicablestateradiobutton" type="radio" class="ace nonappstate" >
+                                                                            <span class="lbl"> Odisha </span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="radio-inline nonapplicableradio-inline">
+                                                                        <label>
+                                                                            <input name="nonapplicablestateradiobutton" type="radio" class="ace nonappstate">
+                                                                            <span class="lbl"> Puducherry</span>
+                                                                        </label>                                                                  
+                                                                    </div> 
+                                                                    <div class="radio-inline nonapplicableradio-inline">
+                                                                        <label>
+                                                                            <input name="nonapplicablestateradiobutton" type="radio" class="ace nonappstate" >
+                                                                            <span class="lbl"> Punjab </span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>                                                        
+                                                    </div><!-- /.col -->
+                                                </div>
+                                            </div>
+                                            <div class="widget-box seagreen editcommonsettings" >
+                                                <div class="widget-header seagreen">
+                                                    <h4 class="widget-title">Andaman & Nicobar Islands</h4>       
+                                                </div>
+                                                <div class="widget-body">
+                                                    <div class="widget-main"> 
+                                                        <div class="commonsettings">
+                                                            <div class="form-group">
+                                                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Name <span class="mandatory">*</span></label>
+                                                                <div class="col-sm-9">
+                                                                    <input type="text" placeholder="Act Name" class="form-control col-sm-9 stateactname"  />
+                                                                </div>                                               
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-sm-2 control-label no-padding-right"> Registration applicable </label>
+                                                                <div class="col-sm-4">
+                                                                    <select class="form-control stateregistrationapplicable">
+                                                                        <option value="">-- Select --</option>
+                                                                        <option value="Yes">Yes</option>
+                                                                        <option value="No">No</option>
+                                                                    </select>
+                                                                </div>
+                                                                <label class="col-sm-2 control-label no-padding-right"> Sub Location </label>
+                                                                <div class="col-sm-4">
+                                                                    <select class="form-control statesublocaion">
+                                                                        <option value="">-- Select --</option>
+                                                                        <option value="state">State</option>
+                                                                        <option value="city">City</option>
+                                                                        <option value="address">Address</option>
+                                                                        <option value="notapplicable">Not Applicable</option>
+                                                                    </select>
+                                                                </div>                                                    
+                                                            </div>  
+                                                        </div>
+                                                        <div class="editactivitytable">
+                                                            <div class="table" id="no-more-tables">
+                                                                <div class="thead">
+                                                                    <div class="tr">
+                                                                        <div class="col-md-3">
+                                                                            <label>Activity Name</label>
+                                                                        </div>
+                                                                        <div class="col-md-1">
+                                                                            <label>Display</label>
+                                                                        </div>
+                                                                        <!--                                                                        <div class="col-md-2">
+                                                                                                                                                    <label>Month and Date</label>
+                                                                                                                                                </div>-->
+                                                                        <div class="col-md-2">
+                                                                            <label>Month</label>
+                                                                        </div>
+                                                                        <div class="col-md-1">
+                                                                            <label>Dates</label>
+                                                                        </div>
+                                                                        <div class="col-md-2">
+                                                                            <label>Importance Level</label>
+                                                                        </div>
+                                                                        <div class="col-md-2">
+                                                                            <label>Rule Information</label>
+                                                                        </div>
+                                                                        <div class="col-md-1">
+                                                                            <label>Action</label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>                                       
+                                                                <div class="tbody">
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="wizard-actions addactivityline">
+                                                            <button type="button" class="btn btn-darkgreen  textalign-right addactivity"><i class="fa fa-plus"></i> Add Activity</button>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+
+                                                        <div class="form-group displaynone abstract">
+                                                            <div class="col-md-6">
+                                                                <label class="col-sm-5 control-label no-padding-right abstractavailable">Abstract available </label>
+                                                                <div class="col-sm-7 mt-10">
+                                                                    <label class="middle">
+                                                                        <input class="ace check-act" type="checkbox" name="checkact">
+                                                                        <span class="lbl"></span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 displaynone abstractfile">
+                                                                <label class="col-sm-4 control-label no-padding-right ">Abstract file </label>
+                                                                <div class="col-sm-8 mt-10">
+                                                                    <input type="file" class="abstractuploadfile" />														
+                                                                </div>    
+                                                            </div>                                                                                                               
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>                                             
+                                            <div class="form-actions  text-right">
+                                                <button type="button" class="btn default" id="acteditcancel"><i class="fa fa-times" ></i> Cancel</button>
+                                                <button type="submit" class="btn btn-blue" id="acteditsave"><i class="fa fa-refresh"></i> Update</button>
+                                            </div>
+                                        </form>
+                                    </div>   
+                                </div>
+                                <!-- Editing Act Ends Here -->
+                                <!-- Display Div -->
+                                <div class="widget-box seagreen displaynone" id="actlist">
+                                    <div class="widget-header seagreen">
+                                        <i class="ace-icon fa fa-gavel"></i>
+                                        <h4 class="widget-title">Act</h4>
+                                        <span class="widget-toolbar">
+                                            <button class="btn btn-sm grey-btn no-border" id="addacts">Add Act</button>
+                                        </span>                                    
+                                    </div>
+                                    <div class="widget-body">
+                                        <div class="widget-main">                                         
+                                            <div class="table" id="no-more-tables">
+                                                <div class="thead">
+                                                    <div class="tr">
+                                                        <div class="col-md-1">
+                                                            <label>S.No</label>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <label>Act Name</label>
+                                                        </div>
+                                                        <div class="col-md-3 text-right">
+                                                            <label>Action</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tbody">
+                                                    <div class="tr">
+                                                        <div class="cell">
+                                                            <div data-title="S.No" class="td col-md-1">
+                                                                <label>1</label>
+                                                            </div>
+                                                            <div data-title="Act Name" class="td col-md-8">
+                                                                <label>A.p Factories & Establishment (national, Festival & Other Holidays) Rules, 1974</label>
+                                                            </div>                                                    
+                                                            <div data-title="Action" class="td col-md-3 text-right">
+                                                                <button type="button" class="btn  btn-grey btn-sm viewact" data-toggle="modal" data-target="#actview" data-backdrop="static"><i class="fa fa-eye"></i> </button>    
+                                                                <button type="button" class="btn  btn-yellow btn-sm editact"><i class="fa fa-pencil"></i> </button>                                                    
+                                                                <button type="button" class="btn btn-danger btn-sm deleteact"  data-toggle="modal" data-target="#confirmation" data-backdrop="static"><i class="fa fa-trash"></i> </button>
+                                                            </div>                                                            
+                                                        </div>                                                   
+                                                    </div>
+                                                    <div class="tr">
+                                                        <div class="cell">
+                                                            <div data-title="S.No" class="td col-md-1">
+                                                                <label>2</label>
+                                                            </div>
+                                                            <div data-title="Act Name" class="td col-md-8">
+                                                                <label>A.p Factories & Establishment (national, Festival & Other Holidays) Rules, 1974</label>
+                                                            </div>                                                    
+                                                            <div data-title="Action" class="td col-md-3 text-right">
+                                                                <button type="button" class="btn  btn-grey btn-sm viewact" data-toggle="modal" data-target="#actview" data-backdrop="static"><i class="fa fa-eye"></i> </button>    
+                                                                <button type="button" class="btn  btn-yellow btn-sm editact"><i class="fa fa-pencil"></i> </button>                                                    
+                                                                <button type="button" class="btn btn-danger btn-sm deleteact"><i class="fa fa-trash"></i> </button>
+                                                            </div>                                                            
+                                                        </div>
+                                                    </div>
+                                                    <div class="tr">
+                                                        <div class="cell">
+                                                            <div data-title="S.No" class="td col-md-1">
+                                                                <label>3</label>
+                                                            </div>
+                                                            <div data-title="Act Name" class="td col-md-8">
+                                                                <label>A.p Factories & Establishment (national, Festival & Other Holidays) Rules, 1974</label>
+                                                            </div>                                                    
+                                                            <div data-title="Action" class="td col-md-3 text-right">                                                                 
+                                                                <button type="button" class="btn  btn-grey btn-sm viewact" data-toggle="modal" data-target="#actview" data-backdrop="static"><i class="fa fa-eye"></i> </button>    
+                                                                <button type="button" class="btn  btn-yellow btn-sm editact"><i class="fa fa-pencil"></i> </button>                                                    
+                                                                <button type="button" class="btn btn-danger btn-sm deleteact"><i class="fa fa-trash"></i> </button>
+                                                            </div>                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>                                      
+                                        </div>
+                                    </div>
+                                </div>  
+                                <!-- Display Div End -->                               
+                                <!-- End Table -->     
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--modal -->
+                <div id="actview" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <!-- Modal content-->
+                        <div class="modal-content viewscroll">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">View Act</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form role="form">
+                                    <div class="form-body">
+                                        <div class="row">                                   
+                                            <div class="col-md-12 col-xs-12">
+                                                <div class="row">
+                                                    <label class="col-md-2 labeltype">Name</label>
+                                                    <div class="col-md-10 value"> A.p Factories & Establishment (national, Festival & Other Holidays) Rules, 1974 </div>
+                                                </div> 
+                                                <hr>
+                                                <div><label class="labeltype">Applicable Industry</label>                                           
+                                                    <div><span class="label label-blue label-white middle">Banking & NBFC</span>
+                                                        <span class="label label-blue label-white middle">BPO, Software Development & IT Services</span>
+                                                        <span class="label label-blue label-white middle">Building Construction Company</span>
+                                                        <span class="label label-blue label-white middle">Clinical Trial Services</span>
+                                                        <span class="label label-blue label-white middle">Consulting Services</span>
+                                                        <span class="label label-blue label-white middle">Education Services</span>
+                                                        <span class="label label-blue label-white middle">Electronics &amp; Telecommunications</span>
+                                                        <span class="label label-blue label-white middle">Factory as per Factories Act</span>    
+                                                        <span class="label label-blue label-white middle">Fertilizers</span>   
+                                                        <span class="label label-blue label-white middle">Food & Beverages</span>     
+                                                        <span class="label label-blue label-white middle">Health care Products and Services</span>    
+                                                        <span class="label label-blue label-white middle">Hotel Industry</span>
+                                                        <span class="label label-blue label-white middle">HR Services</span>
+                                                        <span class="label label-blue label-white middle">Movies, Cinema & Film Industry</span>
+                                                        <span class="label label-blue label-white middle">Newsprint Industry</span>
+                                                        <span class="label label-blue label-white middle">Office & Infrastructure Services</span>
+                                                        <span class="label label-blue label-white middle">Payroll Services</span>
+                                                        <span class="label label-blue label-white middle">Pharmaceutical Industry</span>
+                                                        <span class="label label-blue label-white middle">Plantations Industry</span>
+                                                        <span class="label label-blue label-white middle">Retail / Wolesale Trading</span>
+                                                        <span class="label label-blue label-white middle">Security Agency Services</span>
+                                                        <span class="label label-blue label-white middle">Shipping Company & Port Services</span>
+                                                        <span class="label label-blue label-white middle">Transportation Services Company</span>
+                                                        <span class="label label-blue label-white middle">Venture Capital & Advisory</span></div> 
+                                                </div>
+                                                <hr>
+                                                <div><label class="labeltype">Applicable Company Type </label>
+                                                    <div><span class="label label-blue label-white middle">Hindu Undivided Family (HUF)</span>
+                                                        <span class="label label-blue label-white middle">Individual / Proprietorship</span>
+                                                        <span class="label label-blue label-white middle">Limited Liability Partnership</span>
+                                                        <span class="label label-blue label-white middle">Partnership Firm</span>
+                                                        <span class="label label-blue label-white middle">Private Limited Company</span>
+                                                        <span class="label label-blue label-white middle">Public Limited Company</span>
+                                                        <span class="label label-blue label-white middle">Trust</span></div> 
+                                                </div>  
+                                                <hr>
+                                                <div class="row">
+                                                    <label class="col-md-2 labeltype">Business Area:</label>
+                                                    <div class="col-md-2 value"> Labour compliance </div>
+
+                                                    <label class="col-md-2 labeltype"> Central or State: </label>
+                                                    <div class="col-md-1 value"> State </div>
+
+                                                    <label class="col-md-2 labeltype">Applicable States:</label>
+                                                    <div class="col-md-3 value"> Setup for Multiple State(s) </div>
+                                                </div>
+                                                <hr>                                      
+                                                <div>
+                                                    <label class="col-md-2 labeltype">Act setup States</label>
+                                                    <select class="col-md-10 bradius" id="actsetup">
+                                                        <option value="">-- Select Act Setup State--</option>
+                                                        <option value="AP">Andhra Pradesh</option>
+                                                        <option value="T">Telangana</option>
+                                                        <option value="WY">Wyoming</option>
+                                                    </select>
+                                                    <div class="space-12 clearfix"></div>
+                                                    <hr>
+                                                </div>
+                                                <div class="widget-box seagreen displaynone activitydetails">
+                                                    <div class="widget-header seagreen">
+                                                        <h4 class="widget-title">Telangana Activity Details</h4>        
+                                                    </div>
+                                                    <div class="widget-body">
+                                                        <div class="widget-main" id="users-widget">
+                                                            <div class="table-outer-border">
+                                                                <div class="ace-scroll">
+                                                                    <div class="table " id="no-more-tables">
+                                                                        <div class="thead">  
+                                                                            <div class="tr">
+                                                                                <div class="col-lg-7 col-md-7">
+                                                                                    <label>Act Name</label>
+                                                                                </div>
+                                                                                <div class="col-lg-3 col-md-3">
+                                                                                    <label>Registration applicable</label>
+                                                                                </div>
+                                                                                <div class="col-lg-2 col-md-2">
+                                                                                    <label>Sub Location</label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>                                       
+                                                                        <div class="tbody">
+                                                                            <div class="tr">
+                                                                                <div class="cell">
+                                                                                    <div data-title="Act Name" class="td col-lg-7 col-md-7">
+                                                                                        <label>Bihar Minimum Wages Rules, 1951</label>
+                                                                                    </div>
+                                                                                    <div  data-title="Registration applicable" class="td col-lg3 col-md-3">
+                                                                                        <div>
+                                                                                            No
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div data-title="Sub location" class="td col-lg-2 col-md-2">
+                                                                                        address                                                      
+                                                                                    </div>                                                         
+                                                                                </div>      
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>         
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="clearfix"></div> 
+                                                            <div class="table" id="no-more-tables">
+                                                                <div class="thead">           
+                                                                    <div class="tr">
+                                                                        <div class="col-lg-1 col-md-1">
+                                                                            <label>S.No</label>
+                                                                        </div>
+                                                                        <div class="col-lg-2 col-md-2">
+                                                                            <label>Activity Name</label>
+                                                                        </div>
+                                                                        <div class="col-lg-1 col-md-1">
+                                                                            <label>Display</label>
+                                                                        </div>
+                                                                        <div class="col-lg-2 col-md-2">
+                                                                            <label>Month</label>
+                                                                        </div>
+                                                                        <div class="col-lg-1 col-md-1">
+                                                                            <label>Date </label>
+                                                                        </div> 
+                                                                        <div class="col-lg-1 col-md-1 no-padding">
+                                                                            <label>Importance Level</label>
+                                                                        </div>
+                                                                        <div class="col-lg-3 col-md-3">
+                                                                            <label>Rule Information</label>
+                                                                        </div>
+                                                                        <div class="col-lg-1 col-md-1 no-padding">
+                                                                            <label>Abstract File</label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>              
+
+                                                                <div class="tbody boxedlayer">
+                                                                    <div class="tr">
+                                                                        <div class="cell">
+                                                                            <div data-title="S.no" class="td col-lg-1 col-md-1">
+                                                                                <label>1</label>
+                                                                            </div>
+                                                                            <div data-title="Activity Name" class="td col-lg-2 col-md-2">
+                                                                                <div>
+                                                                                    Maintain Register of Fines - Form I
+                                                                                </div>
+                                                                            </div>
+                                                                            <div data-title="Display" class="td col-lg-1 col-md-1">
+                                                                                <i class="fa fa-check fa-1x" ></i>
+                                                                            </div>
+                                                                            <div data-title="Month" class="td col-lg-2 col-md-2">
+                                                                                <button type="button" class="btn btn-darkyellow btn-sm viewact">All Months</button>                                                         
+                                                                            </div> 
+                                                                            <div data-title="Date" class="td col-lg-1 col-md-1">
+                                                                                <button type="button" class="btn btn-darkblue btn-sm deleteuser">25</button>
+                                                                            </div>  
+                                                                            <div data-title="Importance Level" class="td col-lg-1 col-md-1">
+                                                                                <div>High</div>
+                                                                            </div> 
+                                                                            <div data-title="Rule Information" class="td col-lg-3 col-md-3">
+                                                                                <div>File Annual Return for the previous year (January to December) - Form III</div>
+                                                                            </div> 
+                                                                            <div data-title="Abstract File" class="td col-lg-1 col-md-1">
+                                                                                <a href="#" target="_blank"><i class="fa fa-file-pdf-o fa-2x" aria-hidden="true"></i></a>
+                                                                            </div> 
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="tr">
+                                                                        <div class="cell">
+                                                                            <div data-title="S.no" class="td col-lg-1 col-md-2">
+                                                                                <label>2</label>
+                                                                            </div>
+                                                                            <div data-title="Activity Name" class="td col-lg-2 col-md-2">
+                                                                                <div>Register of Computation of Cash Value of concessional food grains - Form VII</div>
+                                                                            </div>
+                                                                            <div data-title="Display" class="td col-lg-1 col-md-1">
+                                                                                <i class="fa fa-check fa-1x" ></i>
+                                                                            </div>
+                                                                            <div data-title="Month" class="td col-lg-2 col-md-2">
+                                                                                <button type="button" class="btn btn-darkyellow btn-sm viewact">All Months</button>
+                                                                            </div>   
+                                                                            <div data-title="Date" class="td col-lg-1 col-md-1">
+                                                                                <button type="button" class="btn btn-darkblue btn-sm deleteuser">25</button>
+                                                                            </div> 
+                                                                            <div data-title="Importance Level" class="td col-lg-1 col-md-1">
+                                                                                <div>High</div>
+                                                                            </div> 
+                                                                            <div data-title="Rule Information" class="td col-lg-3 col-md-3">
+                                                                                <div>File Annual Return for the previous year (January to December) - Form III</div>
+                                                                            </div>                                                                             
+                                                                            <div data-title="Abstract File" class="td col-lg-1 col-md-1">
+                                                                                <a href="#" target="_blank"><i class="fa fa-file-pdf-o fa-2x" aria-hidden="true"></i></a>
+                                                                            </div> 
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="tr">
+                                                                        <div class="cell">
+                                                                            <div data-title="S.no" class="td col-lg-1 col-md-1">
+                                                                                <label>3</label>
+                                                                            </div>
+                                                                            <div data-title="Activity Name" class="td col-lg-2 col-md-2">
+                                                                                <div>File Annual Return for the previous year (January to December) - Form III</div>
+                                                                            </div>
+                                                                            <div data-title="Display" class="td col-lg-1 col-md-1">
+                                                                                <i class="fa fa-ban" ></i>
+                                                                            </div>
+                                                                            <div data-title="Month" class="td col-lg-2 col-md-2">
+                                                                                <button type="button" class="btn  btn-darkyellow btn-sm viewact">All Months</button>
+                                                                            </div> 
+                                                                            <div data-title="Date" class="td col-lg-1 col-md-1">
+                                                                                <button type="button" class="btn btn-darkblue btn-sm deleteuser">25</button>
+                                                                            </div> 
+                                                                            <div data-title="Importance Level" class="td col-lg-1 col-md-1">
+                                                                                <div>High</div>
+                                                                            </div> 
+                                                                            <div data-title="Rule Information" class="td col-lg-3 col-md-3">
+                                                                                <div>File Annual Return for the previous year (January to December) - Form III</div>
+                                                                            </div>   
+                                                                            <div data-title="Abstract File" class="td col-lg-1 col-md-1">
+                                                                                <a href="#" target="_blank"><i class="fa fa-file-pdf-o fa-2x" aria-hidden="true"></i></a>
+                                                                            </div> 
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="tr">
+                                                                        <div class="cell">
+                                                                            <div data-title="S.no" class="td col-lg-1 col-md-1">
+                                                                                <label>4</label>
+                                                                            </div>
+                                                                            <div data-title="Activity Name" class="td col-lg-2 col-md-2">
+                                                                                <div>Maintain Overtime Register for workers (monthly) - Form IV</div>
+                                                                            </div>
+                                                                            <div data-title="Display" class="td col-lg-1 col-md-1">
+                                                                                <i class="fa fa-check fa-1x" ></i>
+                                                                            </div>
+                                                                            <div data-title="Month" class="td col-lg-2 col-md-2">
+                                                                                <button type="button" class="btn  btn-darkyellow btn-sm viewact">All Months</button>
+                                                                            </div> 
+                                                                            <div data-title="Date" class="td col-lg-1 col-md-1">
+                                                                                <button type="button" class="btn btn-darkblue btn-sm deleteuser">25</button>
+                                                                            </div>                                                                                                         
+                                                                            <div data-title="Importance Level" class="td col-lg-1 col-md-1">
+                                                                                <div>High</div>
+                                                                            </div> 
+                                                                            <div data-title="Rule Information" class="td col-lg-3 col-md-3">
+                                                                                <div>File Annual Return for the previous year (January to December) - Form III</div>
+                                                                            </div> 
+                                                                            <div data-title="Abstract File" class="td col-lg-1 col-md-1">
+                                                                                <a href="#" target="_blank"><i class="fa fa-file-pdf-o fa-2x" aria-hidden="true"></i></a>
+                                                                            </div>
+                                                                        </div>        
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/span-->                                                
+                                        </div>        
+                                    </div>                        
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-orange ok"   data-dismiss="modal"><i class="fa fa-thumbs-o-up"></i> OK</button>
+                                        <button type="button" class="btn default" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+                <!-- Modal --> 
+                <!--Confirmation box for delete STARTS-->   
+                <div id="confirmation" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-sm">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Delete the Act</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form role="form">
+                                    <div class="form-body">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="bigger-110 center">
+                                                    These Act will be permanently deleted and cannot be recovered.
+                                                </div>
+                                                <div class="space-6"></div>
+                                                <p class="bigger-110 bolder center grey">
+                                                    <i class="ace-icon fa fa-hand-o-right blue bigger-120"></i>
+                                                    Are you sure?
+                                                </p>
+                                            </div>                                            
+                                        </div>        
+                                    </div>                        
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn default" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
+                                        <button type="button" class="btn btn-delete red delete"  id="deleterow" data-dismiss="modal"><i class="fa fa-trash"></i> Delete</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>         
+                <!--Confirmation box for delete ENDS-->   
+                <!--Confirmation box for delete STARTS-->   
+                <div id="moveconfirmation" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-sm">
+                        Modal content
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Remove the Act</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form role="form">
+                                    <div class="form-body">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="bigger-110 center">
+                                                    These Act will be permanently Removed from Applicable state and cannot be recovered.
+                                                </div>
+                                                <div class="space-6"></div>
+                                                <p class="bigger-110 bolder center grey">
+                                                    <i class="ace-icon fa fa-hand-o-right blue bigger-120"></i>
+                                                    Are you sure?
+                                                </p>
+                                            </div>                                             
+                                        </div>        
+                                    </div>                        
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger red exchange" id="yesexchange" data-dismiss="modal"><i class="fa fa-exchange"></i> Remove</button>
+                                        <button type="button" class="btn default" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>         
+                <!--Confirmation box for delete ENDS--> 
+                <div id="alertbox1" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-sm">
+                        Modal content
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Dailog Box</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form role="form">
+                                    <div class="form-body">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="bigger-110 center">
+                                                    Display one state in applicable state
+                                                </div>
+                                            </div>                                             
+                                        </div>        
+                                    </div>                        
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-sm btn-danger red exchange"  data-dismiss="modal"><i class="fa fa-check"></i> okay </button>
+                                        <button type="button" class="btn btn-sm default" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>         
+                <!--Confirmation box for delete ENDS-->  
+                <!-- Modal -->
+                <!-- Modal -->
+            </div><!-- /.main-content -->            
+            <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+                <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+            </a>  
+        </div><!-- /.main-container -->       
+        <!-- basic scripts -->
+        <!--[if !IE]> -->
+        <script src="assets/js/jquery.min.js"></script>
+        <!--[if IE]>
+            <script src="assets/js/jquery.1.11.1.min.js"></script>
+        <![endif]-->
+        <!--[if !IE]> -->
+        <!-- <![endif]-->
+        <!--[if IE]>
+            <script type="text/javascript">
+                window.jQuery || document.write("<script src='assets/js/jquery1x.min.js'>"+"<"+"/script>");
+            </script>
+        <![endif]-->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- page specific plugin scripts -->
+        <!--[if lte IE 8]>
+          <script src="assets/js/excanvas.min.js"></script>
+        <![endif]-->      
+        <!-- ace scripts -->
+        <script src="assets/js/ace-elements.min.js"></script>
+        <script src="assets/js/ace.min.js"></script>
+        <script src="assets/js/chosen.jquery.min.js"></script>
+        <script src="assets/js/bootstrap-datepicker.min.js"></script>
+        <!-- inline scripts related to this page -->           
+        <script>
+                    /*Act action after Hide or show*/
+                    $(document).ready(function () {
+                        $('#actlist').removeClass('displaynone');
+                        $('.commonsettings').hide();
+                        $('.editcommonsettings').hide();
+                        $('.activitytable').hide();
+                        $('.editactivitytable').hide();
+                        $('.move-left').css('disabled', 'disabled');
+                        $('.move-right').css('disabled', 'disabled');
+                    });
+                    /* Add act is clicked */
+                    $('#addacts').on('click', function () {
+                        $('#createacts').removeClass('displaynone');
+                        $('#actlist').addClass('displaynone');
+                    });
+                    /* Act submit is clicked */
+                    $('#actsubmit').on('click', function () {
+
+                    });
+                    /* Back add act is clicked */
+                    $('#backacts').on('click', function () {
+                        $('#createacts').addClass('displaynone');
+                        $('#actlist').removeClass('displaynone');
+                    });
+                    /* Edit act is clicked */
+                    $('.editact').on('click', function () {
+                        $('#editacts').removeClass('displaynone');
+                        $('#createacts').addClass('displaynone');
+                        $('#actlist').addClass('displaynone');
+                        $('.move-left').attr('disabled', 'disabled');
+                        $('.move-right').attr('disabled', 'disabled');
+                    });
+                    /* Back Edit act is clicked */
+                    $('#backeditacts').on('click', function () {
+                        $('#editacts').addClass('displaynone');
+                        $('#actlist').removeClass('displaynone');
+                    });
+                    /* Cancel act is clicked */
+                    $('#actcancel').on('click', function () {
+                        $('#createacts').addClass('displaynone');
+                        $('#actlist').removeClass('displaynone');
+                    });
+                    /* Act Edit is clicked */
+//                    $('#acteditsave').on('click', function () {
+//                        $('#editacts').addClass('displaynone');
+//                        $('#actlist').removeClass('displaynone');
+//                        $('#updateerrormsg').removeClass('displaynone').fadeOut(5000).show();
+//                    });
+                    /* Act Edit cancel is clicked */
+                    $('#acteditcancel').on('click', function () {
+                        $('#editacts').addClass('displaynone');
+                        $('#actlist').removeClass('displaynone');
+                    });
+                    /* Validation */
+//                     $('#actsubmit').on('click', function () {
+//                        $('#createacts').addClass('displaynone');
+//                        $('#actlist').removeClass('displaynone');
+//                        $('#successerrormsg').removeClass('displaynone').fadeOut(5000).show();
+//                    });
+//                    $('#actsubmit').on('click', function () {
+//                        var actnamefilter = $('.actname').val();
+//                        var actnamefilter = $('.industry').val();
+//                        var companytypefilter = $('.companytype').val();
+//                        var businessareafilter = $('.businessarea option:selected').val();
+//                        var centralandstatefilter = $('.centralandstate').val();
+//                        var applicablestatefilter = $('.applicablestate').val();
+//                        var activityfilter = $('.activityname').val();
+//                        var displayfilter = $('.display').val();
+//                        var monthanddatefilter = $('.monthanddate').val();
+//                        var importancefilter = $('.importancelevel').val();
+//                        var ruleinfofilter = $('.ruleinfo').val();
+//                        if (actnamefilter === "" || actnamefilter === "" || companytypefilter === "" || businessareafilter === ""
+//                                || centralandstatefilter === "" || applicablestatefilter === "" || activityfilter === "" || displayfilter === ""
+//                                || monthanddatefilter === "" || importancefilter === "" || ruleinfofilter === "")
+//                        {
+//                            $('.form-group,.input-group').addClass('has-error');
+//                            $('.chosen-choices').addClass('errorbox');
+//                            return false;
+//                        } else
+//                        {
+//                            $('.form-group').removeClass('has-error').addClass('has-info');
+//                            return false;
+//                        }
+//                        $('#createacts').addClass('displaynone');
+//                        $('#actlist').removeClass('displaynone');
+//                        $('#successerrormsg').removeClass('displaynone').fadeOut(5000).show();
+//                    });
+//
+//                    $(document).on('click', '#createacts .form-group,#createacts .chosen-choices', function () {
+//                        $(this).removeClass('has-error');
+//                        $(this).removeClass('errorbox');
+//                    });
+                    /*Centeral and state disable and undisable with display of single state or multiple state*/
+                    $('input[name="applicablestates"]').attr('disabled', true);
+                    $(document).ready(function () {
+                        $('.singlestatebox').hide();
+                        $('.multistatebox').hide();
+                        $(".central, .state").change(function () {
+                            var radio = $("input[name='centralandstate']:checked").val();
+                            $('.stateoption').attr('disabled', true);
+                            /* sub location state hide for state and shown in central */
+                            var radio = $("input[name='centralandstate']:checked").val();
+                            if (radio == "central") {
+                                $('.commonsettings').show();
+                                $('.stateoption').attr('disabled', false);
+                                $(".allstate").prop('checked', 'checked');
+                                $('.radio:first-child').show();
+                                $('.multistatebox').hide();
+                                $('.singlestatebox').hide();
+                                var onOff = $(this).is(":not(:checked)") || this.id !== "singlestateselect";
+                                $("#sublocation option[value='state']").toggle(onOff);
+                                $("input[name='applicablestates']").change(function () {
+                                    var onOff = $(this).is(":not(:checked)") || this.id !== "singlestateselect";
+                                    $("#sublocation option[value='state']").toggle(onOff);
+                                });
+                                $(".multistates,.singlestate,.allstate").change(function () {
+                                    var multistate = $("input[name='applicablestates']:checked").val();
+                                    if (multistate == "allstate") {
+                                        $('.multistatebox').hide();
+                                        $('.singlestatebox').hide();
+                                        $('.commonsettings').show();
+                                    } else if (multistate == "multistates") {
+                                        $('.multistatebox').show();
+                                         $('.singlestatebox').hide();
+                                    } else {
+                                        $('.multistatebox').hide();
+                                        $('.singlestatebox').show();
+                                        $('.commonsettings').hide();
+                                    }
+                                });
+                            } else if (radio == "state") {     /* State */
+                                $("#sublocation option[value='state']").hide();
+                                $('.allstate, .multistates, .singlestate').attr('disabled', false);
+                                $('.radio:first-child').hide();
+                                $(".singlestate").prop('checked', 'checked');
+                                $('.multistatebox').hide();
+                                $('.singlestatebox').show();
+                                $('.commonsettings').hide();
+//                                      $("input[name='applicablestates']").change(function() {
+                                $(".multistates,.singlestate").change(function () {
+                                    var multistate = $("input[name='applicablestates']:checked").val();
+                                    $("#sublocation option[value='state']").hide();
+                                    if (multistate == "multistates") {
+                                        $('.commonsettings').show();
+                                        $('.multistatebox').show();
+                                        $('.singlestatebox').hide();
+                                    } else {
+                                        $('.commonsettings').hide();
+                                        $('.multistatebox').hide();
+                                        $('.singlestatebox').show();
+                                    }
+                                });
+                            }
+                        });
+                        var singlestatefilter = $(".singlestatebox").val();
+                        $(".singlestatebox").change(function () {
+                            if (singlestatefilter == '') {
+                                $('.commonsettings').hide();
+                            } else {
+
+                                $('.commonsettings').show();
+                            }
+                        });
+
+                        $(".singlestatebox").change(function () {
+                            $('.commonsettings').show();
+                        });
+                        /* abstract file appear when check box is clicked*/
+                        $(".check-act").change(function () {
+                            if ($(this).is(':checked')) {
+                                $('.abstractfile').removeClass('displaynone').find('.ace-file-container').addClass('errorbox');
+                            } else {
+                                $('.abstractfile').addClass('displaynone').find('.ace-file-container').removeClass('errorbox');
+                                $('.check-act').attr('disabled', false);
+                            }
+                        });
+                        /* check box disabled and enable when upload file is added and removed*/
+                        $(document).on('change', '.abstractuploadfile', function () {
+                            if ($(this).val() != "") {
+                                $('.check-act').attr('disabled', true);
+                                $('.ace-file-container').removeClass('errorbox');
+                                if (!$('.ace-file-container').hasClass('selected')) {
+                                    alert('true');
+                                    $('.ace-file-container').addClass('errorbox');
+                                }
+                            }
+                            $('.remove').click(function ()
+                            {
+                                $('.check-act').attr('disabled', false);
+                                $('.ace-file-container').addClass('errorbox');
+                            });
+                        });
+                    });
+                    /*Centeral and state disable and undisable with display of single state or multiple state Edit*/
+                    $(document).ready(function () {
+                        $('.singlestateboxedit').hide();
+                        $('.multistateboxedit').hide();
+                        $(".centraledit, .stateedit").change(function () {
+                            var radio = $("input[name='centralandstateedit']:checked").val();
+                            $('.allstateedit, .multistatesedit, .singlestateedit').attr('disabled', true);
+                            if (radio == "centraledit") {
+                                $('.allstateedit, .multistatesedit, .singlestateedit').attr('disabled', false);
+                                $(".allstateedit").prop('checked', 'checked');
+                                $('.singlestateboxedit').hide();
+                                $('.multistatebox').hide();
+                            } else if (radio == "stateedit") {
+                                $('.allstateedit, .multistatesedit, .singlestateedit').attr('disabled', false);
+                                $('.allstateedit').attr('disabled', true);
+                                $(".singlestateedit").prop('checked', 'checked');
+                                $('.singlestateboxedit').show();
+                                $('.multistateboxedit').hide();
+                            }
+                        });
+                        $(".multistatesedit,.singlestateedit").change(function () {
+                            var multistate = $("input[name='applicablestatesedit']:checked").val();
+                            if (multistate == "multistatesedit") {
+                                $('.singlestateboxedit').hide();
+                                $('.multistateboxedit').show();
+                            } else if (multistate == "singlestateedit") {
+                                $('.singlestateboxedit').show();
+                                $('.multistateboxedit').hide();
+                            }
+                        });
+                        /*In edit common setting is shown or not*/
+                        $(".nonapplicablestate,.applicablestate").change(function () {
+                            var nonradio = $("input[name='nonapplicablestateradiobutton']:checked").val();
+                            var radio = $("input[name='applicablestateradiobutton']:checked").val();
+                            if (radio !== "" || nonradio !== "") {
+                                $('.editcommonsettings ,.commonsettings').show();
+                                $('.editcommonsettings ,.commonsettings').show();
+                            } else {
+                                $('.editcommonsettings').hide();
+                                $('.editcommonsettings').hide();
+                            }
+                        });
+                    });
+
+                    /* radio-button selected*/
+//                    $(document).on("click", 'input[name="nonapplicablestateradiobutton"],input[name="applicablestateradiobutton"]', function () {
+//                        $('.act-border div.radio-inline').removeClass('selected');
+//                        $(this).parent().parent('.act-border div.radio-inline').addClass('selected');
+//                        $('.move-left').removeAttr('disabled', 'disabled');
+//                        $('.move-right').removeAttr('disabled', 'disabled');
+//
+//                    });
+//                    /* List is appended left to right*/
+//                    $('.list-arrows button').click(function () {
+//                        var move = $(this), actives = '';
+//                        if (move.hasClass('move-left')) {
+//                            actives = $('.nonapplicablestate .act-border .radio-inline.selected');
+//                            actives.clone().appendTo('.applicablestate .act-border').addClass('newappstate');
+//                            $(".newappstate .act-border input.ace").attr('name', 'applicablestateradiobutton');
+//                              $('.applicablestate .act-border').removeClass('errorbox');
+//                            actives.remove();
+//                        } else if ($('.move-right').click)
+//                        {
+//                            if ($('.applicablestate input[name="applicablestateradiobutton"]:checked').val()) {
+//                                var isEmpty =$('.applicablestate input[name="applicablestateradiobutton"]').length;
+//                                $('#moveconfirmation').modal().on('click', '.exchange', function () {
+//                                    if(isEmpty ===1 ){
+//                                     
+//                                      $('.applicablestate .act-border').addClass('errorbox');
+//                                     }
+//                                     else{ 
+//                                         
+//                                         $('.applicablestate .act-border').removeClass('errorbox');
+//                                     }
+//                                    actives = $('.applicablestate .act-border .radio-inline.selected');
+//                                    actives.clone().appendTo('.nonapplicablestate .act-border').removeClass('newappstate');
+//                                    actives.remove();                                    
+//                                });  
+//                                if(isEmpty ===1 ){
+//                                      $('#alertbox1').modal().show();
+//                                     }
+//                                $("input.ace").attr('name', 'applicablestateradiobutton');
+//                            }  
+//                                
+//                        } 
+//                    });
+                    $(document).on("click", 'input[name="nonapplicablestateradiobutton"],input[name="applicablestateradiobutton"]', function () {
+                        $('.act-border div.radio-inline').removeClass('selected');
+                        $(this).parent().parent().addClass('selected');
+                        $('.move-left').removeAttr('disabled', 'disabled');
+                        $('.move-right').removeAttr('disabled', 'disabled');
+
+                    });
+                    /* List is appended left to right*/
+                    $('.list-arrows button').click(function () {
+                        var move = $(this), actives = '';
+                        if (move.hasClass('move-left')) {
+                            actives = $('.nonapplicablestate .nonapplicableradio-inline.selected');
+                            actives.clone().appendTo('.applicablestate .act-border').addClass('newappstate applicableradio-inline').removeClass('nonapplicableradio-inline');
+                            $(".newappstate input.nonappstate").attr('name', 'applicablestateradiobutton');
+                            actives.remove();
+                        } else if ($('.move-right').click)
+                        {
+                            if ($('.applicablestate input[name="applicablestateradiobutton"]:checked').val()) {
+                                var isEmpty = $('.applicablestate input[name="applicablestateradiobutton"]').length; 
+                                if (isEmpty === 1) {
+                                    $('#alertbox1').modal().show();
+                                } else {
+                                    $('.applicablestate .act-border').removeClass('errorbox');
+                                    $('#moveconfirmation').modal().on('click', '.exchange', function () {
+                                        actives = $('.applicablestate .applicableradio-inline.selected');
+                                        actives.clone().appendTo('.nonapplicablestate .act-border').removeClass('newappstate applicableradio-inline').addClass('nonapplicableradio-inline');
+                                        $(".nonapplicableradio-inline input.appstate,.nonapplicableradio-inline input.nonappstate").attr('name', 'nonapplicablestateradiobutton');
+                                        actives.remove();
+                                    });
+                                }
+                            } else {
+                                $('#alertbox').modal().show();
+                            }
+                        }
+                    });
+
+                    /*In View act setup change and activity will appear  */
+                    $('#actsetup').on('change', function () {
+                        $(".activitydetails").css('display', (this.value === 'T') ? 'block' : 'none');
+                    });
+                    $('#actview').on('hide.bs.modal', function () {
+                        location.reload();
+                    });
+                    /* Activity add more in table - Add */
+                    var i = 0;
+                    $(".addactivity").on('click', function () {
+                        $(".abstract").removeClass('displaynone').show();
+                        $('.activitytable').show();
+//                        var data = "<div class='tr'><div class='cell'><div data-title='Name' class='td col-md-2'><textarea class='form-control activityname'></textarea></div><div data-title='Display' class='td col-md-1'><label class='middle'><input class='ace display' type='checkbox'><span class='lbl'</span></label></div><div data-title='Month' class='td col-md-2'><select class='form-control'><option value=''>-- Select --</option><option value='state'>All Months</option><option value='city'>January</option><option value='address'>February</option><option value='city'>March</option><option value='address'>April</option><option value='city'>May</option><option value='address'>June</option><option value='city'>July</option><option value='address'>August </option><option value='city'>September</option><option value='address'>October</option><option value='address'>November </option><option value='city'>December</option></select></div><div data-title='Dates' class='td col-md-2'><select class='form-control'><option value=''>-- Select --</option><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option><option value='6'>6</option><option value='7'>7</option><option value='8'> 8</option><option value='9'>9</option><option value='10'>10</option><option value='11'>11</option><option value='12'> 12</option><option value='13'>13</option><option value='14'>14</option><option value='15'>15</option><option value='16'> 16</option><option value='17'>17</option><option value='18'>18</option><option value='19'>19</option><option value='20'> 20</option><option value='21'>21</option><option value='22'>22</option><option value='23'>23</option><option value='24'> 24</option><option value='25'>25</option><option value='26'>26</option><option value='27'>27</option><option value='28'> 28</option></select></div><div data-title='Importance Level' class='td col-md-2'><select class='form-control importancelevel'><option value=''> -- Select --</option><option value='high'> High</option><option value='low'>Low</option></select></div><div data-title='Rule Information' class='td col-md-2'><input type='text' placeholder='Rule Information' class='form-control ruleinfo'></div>  <div data-title='Action' class='td col-md-1'><button type='button' class='btn btn-danger btn-sm delete'><i class='fa fa-trash'></i> </button></div></div></div>"
+//                        var data = ";// date picker <div class='tr'><div class='cell'><div class='form-group'><div data-title='Name' class='td col-md-3'><textarea class='form-control activityname'></textarea></div><div data-title='Display' class='td col-md-1'><label class='middle'><input class='ace display' type='checkbox'><span class='lbl'></span></label></div><div data-title='Month and Date' class='td col-md-2'><div class='input-group'><input class='form-control date-picker monthanddate'  type='text' data-date-format='dd-mm-yyyy' /><span class='input-group-addon'><i class='fa fa-calendar bigger-110'></i></span></div></div><div data-title='Importance Level' class='td col-md-2'><select class='form-control importancelevel'><option value=''> -- Select --</option><option value='high'> High</option><option value='low'>Low</option></select></div><div data-title='Rule Information' class='td col-md-3'><input type='text' placeholder='Rule Information' class='form-control ruleinfo'></div>  <div data-title='Action' class='td col-md-1'><button type='button' class='btn btn-danger btn-sm delete'><i class='fa fa-trash'></i> </button></div></div></div></div>"
+                        $('.activitytable .tbody').append("<div class='tr'><div class='cell'><div data-title='Activit Name' class='td col-md-3'><textarea class='form-control activityname'></textarea></div><div data-title='Display' class='td col-md-1'><label class='middle'><input class='ace display' type='checkbox'><span class='lbl'</span></label></div><div data-title='Month' class='td col-md-2'><select class='form-control allmonths'><option value=''>-- Select --</option><option value='allmonths'>All Months</option><option value='city'>January</option><option value='address'>February</option><option value='city'>March</option><option value='address'>April</option><option value='city'>May</option><option value='address'>June</option><option value='city'>July</option><option value='address'>August </option><option value='city'>September</option><option value='address'>October</option><option value='address'>November </option><option value='city'>December</option></select></div><div data-title='Dates' class='td col-md-1'><select class='form-control date'><option value=''>-- Select --</option><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option><option value='6'>6</option><option value='7'>7</option><option value='8'> 8</option><option value='9'>9</option><option value='10'>10</option><option value='11'>11</option><option value='12'> 12</option><option value='13'>13</option><option value='14'>14</option><option value='15'>15</option><option value='16'> 16</option><option value='17'>17</option><option value='18'>18</option><option value='19'>19</option><option value='20'> 20</option><option value='21'>21</option><option value='22'>22</option><option value='23'>23</option><option value='24'> 24</option><option value='25'>25</option><option value='26'>26</option><option value='27'>27</option><option value='28'> 28</option></select></div><div data-title='Importance Level' class='td col-md-2'><select class='form-control importancelevel'><option value=''> -- Select --</option><option value='high'> High</option><option value='low'>Low</option></select></div><div data-title='Rule Information' class='td col-md-2'><input type='text' placeholder='Rule Information' class='form-control ruleinfo'></div>  <div data-title='Action' class='td col-md-1'><button type='button' class='btn btn-danger btn-sm delete'><i class='fa fa-trash'></i> </button></div></div></div>");
+                        i++;
+                    });
+
+                    /* Activity add more in table - Edit */
+                    var i = 0;
+                    $(".addactivity").on('click', function () {
+                        $(".abstract").removeClass('displaynone').show();
+                        $('.editactivitytable').show();
+                        var data = "<div class='tr'><div class='cell'><div data-title='Activit Name' class='td col-md-3 '><textarea class='form-control activityname'></textarea></div><div data-title='Display' class='td col-md-1'><label class='middle'><input class='ace display' type='checkbox'><span class='lbl'</span></label></div><div data-title='Month' class='td col-md-2'><select class='form-control allmonths'><option value=''>-- Select --</option><option value='state'>All Months</option><option value='city'>January</option><option value='address'>February</option><option value='city'>March</option><option value='address'>April</option><option value='city'>May</option><option value='address'>June</option><option value='city'>July</option><option value='address'>August </option><option value='city'>September</option><option value='address'>October</option><option value='address'>November </option><option value='city'>December</option></select></div><div data-title='Dates' class='td col-md-1'><select class='form-control date'><option value=''>-- Select --</option><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option><option value='6'>6</option><option value='7'>7</option><option value='8'> 8</option><option value='9'>9</option><option value='10'>10</option><option value='11'>11</option><option value='12'> 12</option><option value='13'>13</option><option value='14'>14</option><option value='15'>15</option><option value='16'> 16</option><option value='17'>17</option><option value='18'>18</option><option value='19'>19</option><option value='20'> 20</option><option value='21'>21</option><option value='22'>22</option><option value='23'>23</option><option value='24'> 24</option><option value='25'>25</option><option value='26'>26</option><option value='27'>27</option><option value='28'> 28</option></select></div><div data-title='Importance Level' class='td col-md-2'><select class='form-control importancelevel'><option value=''>-- Select --</option><option value='high'> High</option><option value='low'>Low</option></select></div><div data-title='Rule Information' class='td col-md-2'><input type='text' placeholder='Rule Information' class='form-control'></div>  <div data-title='Action' class='td col-md-1 text-right'><button type='button' class='btn btn-danger btn-sm delete'><i class='fa fa-trash'></i> </button></div></div></div>"
+                        $('.editactivitytable .tbody').append(data);
+                        i++;
+                        /* Date Range */
+                        $('.date-picker').datepicker({
+                            autoclose: true,
+                            todayHighlight: true,
+                            format: "dd MM "
+                        });
+                    });
+                    /* Activity Delete in table - Add */
+                    $(document).on('click', '.delete', function () {
+                        var i = $('.activitytable').find('div.tr').length;
+                        $(this).parents('div.tr').remove();
+                        if (i == 2) {
+                            $('.activitytable').hide();
+                            $('.abstract').hide();
+                        }
+                    });
+                    /* Activity Delete in table - Edit */
+                    $(document).on('click', '.delete', function () {
+                        var i = $('.editactivitytable').find('div.tr').length;
+                        $(this).parents('div.tr').remove();
+                        if (i == 1) {
+                            $('.editactivitytable').hide();
+                            $('.abstract').hide();
+                        }
+                    });
+                    jQuery(function ($) {
+                        /* upload jquery */
+                        $('.abstractuploadfile').ace_file_input({
+                            no_file: 'No File ...',
+                            btn_choose: 'Choose',
+                            btn_change: 'Change',
+                            droppable: false,
+                            onchange: null,
+                            thumbnail: false //| true | large
+                                    //whitelist:'gif|png|jpg|jpeg'
+                                    //blacklist:'exe|php'
+                                    //onchange:''
+                                    //
+                        });
+                        /* Chosen jquery */
+                        $('.chosen-select').chosen();
+                    });
+                    /* Tool Tip */
+                    $("#hide-option").tooltip({
+                        hide: {
+                            effect: "explode",
+                            delay: 250
+                        }
+                    });
+                    /* Delete Error msg */
+                    $('.delete').on('click', function () {
+                        $('#deleteerrormsg').removeClass('displaynone').show().fadeOut(5000);
+                    });
+//                    /* Validation */               
+                    $(document).on("click", "#actsubmit", function (e) {
+                        var validform = []; //formvalidate(input class/id,Placeholder,Please Enter);
+
+                        validform.push(formvalidate('.actname', 0));
+
+                        var industryvalid = $("#industriesapplicable_chosen ul.chosen-choices li.search-choice").length;
+                        validform.push(formvalidate('#industriesapplicable_chosen  ul.chosen-choices', industryvalid));
+                        //        if(industryvalid == 0){
+                        //            validform.push(formvalidate('#industriesapplicable_chosen  ul.chosen-choices',0));
+                        //        }
+
+                        var companytypevalid = $("li.search-choice").length;
+                        validform.push(formvalidate('#companytypeapplicable_chosen ul.chosen-choices', companytypevalid));
+                        //        if(companytypevalid == 0){
+                        //            validform.push(formvalidate('#companytypeapplicable_chosen ul.chosen-choices',0));
+                        //        }
+
+                        validform.push(formvalidate('.businessarea', 0));
+
+                        validform.push(formradiovalidation('input[name="centralandstate"]:checked', ''));
+
+                        //validform.push(formradiovalidation('input[name="applystate"]:checked',''));
+
+                        var statevalidform = $("span.getstateselbtnid").length;
+
+                        if (statevalidform == 0) {
+                            validform.push(formvalidate('.stateinputclass', 0, "Please "));
+                        }
+                        if (statevalidform == 1) {
+                            $('.stateinputclass').width(300);
+                            validform.push(formvalidate('.stateinputclass', "State", "Please Select More Than One"));
+                        }
+                        $(".activityname ,.allmonths, .date, .importancelevel").each(function () {
+                            validform.push(formvalidate(this, "Activity Name"));
+                            validform.push(formvalidate(this, "Month"));
+                            validform.push(formvalidate(this, "Dates"));
+                            validform.push(formvalidate(this, "Importance Level"));
+                        });
+                        validform.push(formvalidate('.singlestatebox', 0));
+                        validform.push(formvalidate('.registrationapplicable', 0));
+                        validform.push(formvalidate('#sublocation', 0));
+                        validform.push(formvalidate('.validsubloca', 0, 0));
+                        validform.push(formvalidate('.ace-file-container', 0));
+                    });
+                    function formvalidate(input, placehol) {
+                        var inputname = $(input).val();
+                        var radio = placehol;
+                        var placeholder = "";
+
+                        if (inputname == '' || inputname == null) {
+                            if ($(input).is(':visible')) {
+
+                                if (!$(input).hasClass('errorbox')) {
+                                    $(input).addClass("errorbox");
+                                    $(input).focus(function () {
+                                        $(input).removeClass("errorbox");
+                                        if (!$('li').hasClass('search-choice')) {
+                                            alert(radio)
+                                            $('#industriesapplicable_chosen  ul.chosen-choices').addClass("errorbox");
+                                            $('#companytypeapplicable_chosen ul.chosen-choices').addClass("errorbox");
+                                        } else {
+                                            $('#industriesapplicable_chosen  ul.chosen-choices').removeClass("errorbox");
+                                            $('#companytypeapplicable_chosen ul.chosen-choices').removeClass("errorbox");
+                                        }
+                                    });
+                                }
+                                return false;
+                            } else {
+                                return true;
+                            }
+                        } else {
+                            return true;
+                        }
+                    }
+                    function formradiovalidation(input, htmlerror) {
+                        var inputname = $(input).val();
+                        if (inputname == '' || inputname == null || inputname == 'undefined') {
+
+                            var inputradio = input.replace(':checked', '');
+                            if (!$(inputradio).parent().hasClass('errorlabel')) {
+                                //$(inputradio).parent().parent().append(htmlerror);
+                                $(inputradio).parent().addClass("errorlabel");
+
+                                $(inputradio).change(function () {
+                                    $(inputradio).parent().removeClass("errorlabel");
+
+                                });
+                            }
+
+                            return false;
+                        } else {
+                            return true;
+                        }
+                    }
+                    /* Edit Validation */
+                    $('input[name="centralandstateedit"]').attr('disabled', true);
+                    $(document).on("click", "#acteditsave", function (e) {
+                        var validform = [];
+                        validform.push(formvalidate('.editactname', 0));
+                        validform.push(formvalidate('#industriesedit', 0));
+                        validform.push(formvalidate('#companytypeedit', 0));
+                        validform.push(formvalidate('.editbusinessarea', 0));
+                        validform.push(formvalidate('.stateactname', 0));
+                        validform.push(formvalidate('.stateregistrationapplicable', 0));
+                        validform.push(formvalidate('.statesublocaion', 0));
+                        $(".activityname ,.allmonths, .date, .importancelevel").each(function () {
+                            validform.push(formvalidate(this, "Activity Name"));
+                            validform.push(formvalidate(this, "Month"));
+                            validform.push(formvalidate(this, "Dates"));
+                            validform.push(formvalidate(this, "Importance Level"));
+                        });
+                        if($.inArray(false,validform) == -1) {
+                                 return true;
+                            }
+                        return false;
+                    });
+                    function formvalidate(input) {
+                        var inputname = $(input).val();
+
+                        if (inputname == '' || inputname == null) {
+
+                            if ($(input).hasClass('chosen-select')) {
+                                $(input + "_chosen").find(".chosen-choices").addClass('errorbox');
+
+                                $("select" + input).chosen().change(function () {
+                                    $(input + "_chosen").find(".chosen-choices").removeClass('errorbox');
+                                });
+                                return false
+                            }
+                            if ($(input).is(':visible')) {
+                                if (!$(input).hasClass('errorbox')) {
+                                    $(input).addClass("errorbox");
+                                    $(input).focus(function () {
+                                        $(input).removeClass("errorbox");
+                                    });
+                                }
+                                return false;
+                            } else {
+                                return true;
+                            }
+                        } else {
+                            return true;
+                        }
+                    }
+                    
+//window.onload = function() {
+    
+    var blockUI = document.createElement("div"); var blockUI = $("div").append();
+    blockUI.setAttribute("id", "blocker");blockUI.attr("id", "blocker");
+    blockUI.innerHTML = '<div>Loading...<img src="http://www.socialups.com/static/images/fbinventory/ajax_loader.gif"></div>'
+    document.body.appendChild(blockUI);blockUI.html('<div>Loading...<img src="http://www.socialups.com/static/images/fbinventory/ajax_loader.gif"></div>');
+    $(this).html(blockUI);
+    
+    var cover = document.getElementById("blocker").style.display = "none"; var cover = $('#blocker');
+    
+    var btn = document.getElementById("bloc");var btn = $('#blocker');
+    
+    btn.onclick = block;
+    
+    function block()
+    {
+        document.getElementById("blocker").style.display = "";
+        setTimeout(function()
+        {
+        document.getElementById("blocker").style.display = "none";
+        }, 3000);
+    }
+//}
+        </script>  
+    </body>
+</html>
