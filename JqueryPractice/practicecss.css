@@ -1,0 +1,87 @@
+body{
+padding:10px;margin:0px;}
+.container{
+background-color:red;width:100px;height:100px;margin:5px;
+}
+.para{
+background-color:blue;color:white;width:150px;height:150px;}
+.important {
+    font-weight: bold;    font-size: xx-large;    background-color: yellow;}
+
+	#o{
+	color: blue;
+	}
+	p>.two,.one,.two{
+	background-color: #eaeabd;	display:none;
+	}
+	.hi{
+	    background-color: #187d8c;    color: white;    font-size: 20px;    padding: 5px;    border-radius: 6px;	}
+	.tab{	    background-color: cadetblue; padding: 5px 20px; border-radius: 6px;    color: white;	}
+	.tab.active{
+	background-color:#bb102e; border-color:white;
+	}
+	.tab-content {
+	background: #83ccbb;  box-shadow: 0 15px 20px -15px rgba(0, 0, 0, 0.3), 0 35px 50px -25px rgba(0, 0, 0, 0.3), 0 85px 60px -25px rgba(0, 0, 0, 0.1);
+	display: none;
+	padding: 1.5rem;
+	color: #4a5666;
+}
+.show{
+display:block;}
+.has{
+
+border-color: red;
+}
+.blink-1 {
+	-webkit-animation: blink-1 0.6s both;
+	        animation: blink-1 0.6s both;
+}
+@-webkit-keyframes blink-1 {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+@keyframes blink-1 {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+.spinner{
+    width: 80px;
+    height: 80px;
+    
+    border: 2px solid #f3f3f3;
+    border-top:3px solid #f25a41;
+    border-radius: 100%;
+    
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+    animation: spin 1s infinite linear;
+}
+.img{
+display:fixed;
+}
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
